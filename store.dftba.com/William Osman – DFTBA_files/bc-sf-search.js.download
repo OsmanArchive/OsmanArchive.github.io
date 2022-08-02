@@ -1,0 +1,60 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+// Override Settings
+var bcSfSearchSettings = {
+    search: {
+        //suggestionMode: 'test',
+        //suggestionPosition: 'left'
+    }
+};
+
+// Customize style of Suggestion box
+BCSfFilter.prototype.customizeSuggestion = function(suggestionElement, searchElement, searchBoxId) {
+};
+
+// Build number of Search result
+BCSfFilter.prototype.buildSearchResultNumber = function(data) {
+    var content = '';
+    var searchTerm = stripHtml(this.getSearchTerm());
+    if (searchTerm != null) {
+        var content = bcSfFilterConfig.label.search_result_number_other;
+        if (data.total_product <= 1) {
+            var content = bcSfFilterConfig.label.search_result_number_one;
+        }
+        content = content.replace(/{{ count }}/g, data.total_product).replace(/{{ terms }}/g, searchTerm);
+    }
+    jQ('.' + this.class.searchResultNumber).html(content);
+};
+
+}
+/*
+     FILE ARCHIVED ON 00:09:52 Jun 05, 2020 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:02:32 May 24, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 2606.701
+  exclusion.robots: 0.164
+  exclusion.robots.policy: 0.152
+  RedisCDXSource: 221.7
+  esindex: 0.013
+  LoadShardBlock: 2346.621 (3)
+  PetaboxLoader3.datanode: 829.044 (4)
+  CDXLines.iter: 26.948 (3)
+  load_resource: 296.296
+  PetaboxLoader3.resolve: 79.061
+*/

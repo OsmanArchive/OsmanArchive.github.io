@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+        <title>Hacking Harry Potter Wands | William Osman</title>
+        <link href="../../favicon.ico" rel="icon" type="image/x-icon">
+        <link rel="stylesheet" href="../../styles.css">
+        <meta content="William Osman engineering blog" name="description">
+        <!-- Yo Dawg... -->
+    </head>
+    <body class="magazine notouch viewitem-open">
+        <div class="viewitem-panel">
+            <div class="viewitem-wrap">
+                <div class="viewitem-background"></div>
+                <div class="viewitem-header"></div>
+                <div class="viewitem-inner">
+                    <div class="viewitem-content" tabindex="0">
+                        <div class="article hentry  " itemscope="">
+                            <meta itemprop="image_url" content="../../resources/full/wand_thumbnail.jpg">
+                            <meta itemprop="thumbnailUrl" content="../../resources/thumbnails/wand_thumbnail.jpg">
+                            <meta itemprop="blogId" content="6671699914881784896">
+                            <meta itemprop="postId" content="9181681197539331291">
+                            <div class="article-header">
+                                <a class="ribbon date " title="19th December 2017" href="hacking-harry-potter-wands.html" itemprop="url">
+                                    <div class="top ribbon-piece">Dec</div>
+                                    <div class="bottom ribbon-piece">19</div>
+                                    <div class="tail">
+                                        <div class="left ribbon-piece"></div>
+                                        <div class="right ribbon-piece"></div>
+                                    </div>
+                                </a>
+                                <h1 class="title entry-title" itemprop="name">
+                                    <a href="hacking-harry-potter-wands.html">
+                                    Hacking Harry Potter Wands</a>
+                                </h1>
+                            </div>
+                            <div class="article-content entry-content" itemprop="articleBody">
+                                <div class="separator" style="clear: both; text-align: center;"></div>
+                                <div class="separator" style="clear: both; text-align: center;"><a href="../../resources/2017/12/hhpw/wand_thumbnail.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="900" data-original-width="1600" height="225" src="../../resources/2017/12/hhpw/wand_thumbnail.jpg" width="400"></a></div>
+                                <br>
+                                Make an interactive Harry Potter wand out of literally anything.<br>
+                                <br>
+                                <a name="more"></a>
+                                <h2>What?</h2>
+                                <div>
+                                    Harry Potter World inside of Universal Studios Hollywood/Orlando has 'magic' interactive displays. In order to interact with these displays you need to buy a special interactive wand.<br>
+                                    <h2>Why?</h2>
+                                </div>
+                                <div>The interactive wands cost a magical $55, but consist of nothing more than a magical plastic stick and magical retro-reflector. Why pay $55 when you could make your own wand that works half as well for 1/10 the cost!</div>
+                                <h2>Video</h2>
+                                <div>
+                                    <div class="separator" style="clear: both; text-align: center;"><iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/ZuRIQu0oOAA/0.jpg" frameborder="0" height="360" src="https://www.youtube.com/embed/ZuRIQu0oOAA?feature=player_embedded&amp;wmode=opaque" width="640"></iframe></div>
+                                    <br>
+                                </div>
+                                <div>Filming by&nbsp;<a href="http://www.johnwillner.com/">Cameramanjohn</a></div>
+                                <h2>How do the Wands Work?</h2>
+                                <div>The&nbsp;<a href="https://www.google.com/patents/US20140240102?dq=universal+wand+patent&amp;hl=en&amp;sa=X&amp;ved=0ahUKEwia34OwwpLYAhWKKCYKHXuUD9QQ6wEIKjAA">interactive wand patent by&nbsp;Universal City Studios Llc</a>&nbsp;describes the wand as a passive device, meaning no electronics inside, that simply reflects light back to a sensor that tracks the wand's movement.&nbsp;</div>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="../../resources/2017/12/hhpw/US20140240102A1-20140828-D00000.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="1600" data-original-width="1304" height="400" src="../../resources/2017/12/hhpw/US20140240102A1-20140828-D00000.png" width="325"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="font-size: 12.8px;">FIG.1 from the patent</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div><br>
+                                </div>
+                                <div>The actual setup consists of a near-infrared camera hidden inside of the animatronic display, with a ring of infrared LEDs pointing towards the user.&nbsp;</div>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="../../resources/2017/12/hhpw/IR_camera.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="572" data-original-width="1096" height="208" src="../../resources/2017/12/hhpw/IR_camera.png" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="font-size: 12.8px;">IR camera and LEDs in Harry Potter World</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>The wand has a small retro-reflector on the tip which bounces some of the infrared light directly back to the camera. The camera sees a small glowing dot at the tip of the wand. As the glowing tip moves through the image captured by the camera, its motion is recorded and compared to the "correct" spell movement. When a correct spell movement is detected, the system activates an animatronic display.</div>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="../../resources/2017/12/hhpw/Spell_Marker.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="608" data-original-width="876" height="277" src="../../resources/2017/12/hhpw/Spell_Marker.png" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="font-size: 12.8px;">Plaques indicate the correct wand movement</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h2>Making your own wand</h2>
+                                <div>Making a functional wand really only depends on the retro-reflector you use, not what it's strapped to. Seriously, all you need to do is put a small (&lt;3mm) retro-reflector on an object and it should work.</div>
+                                <div><br>
+                                </div>
+                                <div>This blog post is kinda rushed, so I'm just going to describe what we tried and how well it worked.</div>
+                                <h4>Worked Best:</h4>
+                                <div>
+                                    <ol>
+                                        <li><a href="http://www.bleng.com/3-0mm-reflective-markers-hemispheres-set-of-10.html">3mm Facial tracking dots</a>&nbsp;(we did NOT try different size dots)</li>
+                                    </ol>
+                                </div>
+                                <h4>Did Work:</h4>
+                                <div>
+                                    <ol>
+                                        <li><a href="https://www.amazon.com/X4-Waterproof-self-adhesive-tape-reflective-Conspicuity-reflectante/dp/B01MU2LLIF/ref=sr_1_3?ie=UTF8&amp;qid=1513671243&amp;sr=8-3&amp;keywords=reflective+tape">Dollar store reflective tape</a>&nbsp;with the edges curled up</li>
+                                        <li><a href="http://www.bleng.com/3mtm-scotchlitetm-7610-reflective-tape-1-wide-adhesive-backing.html">3M reflective tape</a>&nbsp;(a small 0.125 inch square)</li>
+                                    </ol>
+                                    <h4>Didn't Work:</h4>
+                                </div>
+                                <div>
+                                    <ol>
+                                        <li>Metallic hemispheres&nbsp;</li>
+                                        <li>IR LED (could try a pinhole next time)</li>
+                                    </ol>
+                                    <h4>Bought, but didn't try:</h4>
+                                </div>
+                                <div>
+                                    <ol>
+                                        <li><a href="https://www.amazon.com/Tactical-Infrared-Reflective-Adhesive-Sticker/dp/B00OJONP1Y/ref=sr_1_3?ie=UTF8&amp;qid=1513671754&amp;sr=8-3&amp;keywords=tactical+reflective+tape">Tactical IR reflective tape</a></li>
+                                    </ol>
+                                </div>
+                                <h2>Results</h2>
+                                <div>This WORKS, but not as well as the real wands. You will get much better results once the sun starts setting, and we had trouble with the reflectors on bright surfaces (like Mr. Bones' head)</div>
+                                <h2>Thanks To:</h2>
+                                <div><a href="https://www.lifepixel.com/">www.LifePixel.com&nbsp;</a>for converting a Canon Rebel T2i to near-infrared so we could see what the IR cameras see!</div>
+                                <div><br>
+                                </div>
+                            </div>
+                            <div class="article-footer">
+                                <div class="publish-info">
+                                    Posted <abbr class="time published" title="2017-12-19T08:30:00.001Z" itemprop="datePublished">19th December 2017</abbr> by <a class="url fn" href="" rel="author" itemprop="author">William</a>
+                                </div>
+                                <div class="share-controls  delay" data-defer="" data-delay="1000">
+                                    <span class="share-twitter twitter-share-button  delay" ><iframe allowtransparency="true" frameborder="0" scrolling="no" src="../../p/twitter.html"></iframe></span>
+                                    <span class="share-facebook  delay"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="../../p/facebook.html"></iframe></span>
+                                </div>
+                            </div>
+                            <div class="comments" data-defer="">
+                                <div class="comments-header toggle-switch">
+                                    <span class="bubble  comments-count " title="15 comments">
+                                    <span class="bubble-content">15</span>
+                                    <span class="bubble-tail"></span>
+                                    </span>
+                                    <h3>
+                                        View comments
+                                    </h3>
+                                </div>
+                                <div class="comments-wrapper blogger-comments toggle-container" data-itemid="9181681197539331291" style="display: block;">
+                                    <div class="comments-content">
+                                        <div id="bc_1_1C" kind="c">
+                                            <div id="bc_1_1CT">
+                                                <div id="bc_1_0T" class="comment-thread" kind="r" t="0" u="0">
+                                                    <ol id="bc_1_0TB">
+                                                        <li id="bc_1_2B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c7497105876519595611" class="comment-block">
+                                                                <div id="bc_1_2M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Anonymous</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="hacking-harry-potter-wands.html">February 27, 2018 at 6:49 PM</a></span></div>
+                                                                <p id="bc_1_2MC" class="comment-content">Hey, I tried 5mm facial tracking dot thinking that it would work better since it is bigger in diameter but it didn't. Did you try at Universal Studios Hollywood location? </p>
+                                                                <span id="bc_1_2MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-898907863"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_1_2BR" class="comment-replies">
+                                                                <span id="bc_1_2b+seedGD" kind="d">
+                                                                    <div id="bc_1_6T" class="comment-thread inline-thread" kind="t" t="0" u="0">
+                                                                        <span id="bc_1_6TT" class="thread-toggle thread-expanded" kind="g">
+                                                                            <span id="bc_1_6TA" class="thread-arrow"></span>
+                                                                            <span id="bc_1_6TN" class="thread-count">
+                                                                                <span id="bc_1_6TNT" style="display: none;">0</span><span id="bc_1_6TNU" style="display: none;"></span><a href="javascript:;" target="_self">Replies</a>
+                                                                                <div id="bc_1_6TD" class="thread-dropContainer thread-expanded"><span class="thread-drop"></span></div>
+                                                                            </span>
+                                                                        </span>
+                                                                        <ol id="bc_1_6TC" class="thread-chrome thread-expanded" unselectable="on">
+                                                                            <div style="zoom:1" unselectable="on">
+                                                                                <li id="bc_1_6B" class="comment" kind="b">
+                                                                                    <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                                                    <div id="c6493671029236596332" class="comment-block">
+                                                                                        <div id="bc_1_6M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Anonymous</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="hacking-harry-potter-wands.html">July 23, 2018 at 5:57 PM</a></span></div>
+                                                                                        <p id="bc_1_6MC" class="comment-content">Did the 5mm work?</p>
+                                                                                        <span id="bc_1_6MN" class="comment-actions secondary-text" kind="m"><span class="item-control blog-admin pid-475282150"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                                                    </div>
+                                                                                    <div id="bc_1_6BR" class="comment-replies"></div>
+                                                                                    <div id="bc_1_6B_box" class="comment-replybox-single"></div>
+                                                                                </li>
+                                                                                <li id="bc_1_15B" class="comment" kind="b">
+                                                                                    <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                                                    <div id="c2268761137360550021" class="comment-block">
+                                                                                        <div id="bc_1_15M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Anonymous</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="hacking-harry-potter-wands.html">January 11, 2022 at 5:14 AM</a></span></div>
+                                                                                        <p id="bc_1_15MC" class="comment-content">I know this is years from when this was posted. I measured the actual dome tip of an interactive wand and it is 4mm in diameter. </p>
+                                                                                        <span id="bc_1_15MN" class="comment-actions secondary-text" kind="m"><span class="item-control blog-admin pid-1155606119"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                                                    </div>
+                                                                                    <div id="bc_1_15BR" class="comment-replies"></div>
+                                                                                    <div id="bc_1_15B_box" class="comment-replybox-single"></div>
+                                                                                </li>
+                                                                            </div>
+                                                                            <div id="bc_1_6I" class="continue" kind="ci"><a href="javascript:;" target="_self">Reply</a></div>
+                                                                        </ol>
+                                                                        <div id="bc_1_6T_box" class="comment-replybox-thread"></div>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                            <div id="bc_1_2B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_1_3B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c4247774719146514697" class="comment-block">
+                                                                <div id="bc_1_3M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Anonymous</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="hacking-harry-potter-wands.html">March 22, 2018 at 10:02 AM</a></span></div>
+                                                                <p id="bc_1_3MC" class="comment-content">What is that kazoo song at the beginning?</p>
+                                                                <span id="bc_1_3MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-1736064890"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_1_3BR" class="comment-replies"></div>
+                                                            <div id="bc_1_3B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_1_4B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c6907848236899547946" class="comment-block">
+                                                                <div id="bc_1_4M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">ebuck29</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="hacking-harry-potter-wands.html">April 5, 2018 at 8:34 PM</a></span></div>
+                                                                <p id="bc_1_4MC" class="comment-content">Looking at the “real” wands, the IR reflector is recessed into the tip of the wand. Maybe that’s part of the reason why it works better?</p>
+                                                                <span id="bc_1_4MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-2025909406"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_1_4BR" class="comment-replies"></div>
+                                                            <div id="bc_1_4B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_1_5B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c5075019712063653036" class="comment-block">
+                                                                <div id="bc_1_5M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">jhon</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="hacking-harry-potter-wands.html">April 24, 2018 at 3:35 AM</a></span></div>
+                                                                <p id="bc_1_5MC" class="comment-content">the works and of course the occasional poem when the mood strikes. Since I have nothing else... have a Random Photo. Sunset on The River Walk As always, my Flickr photostream is her... <a href="http://mp3converter.tv/" rel="nofollow">link </a><br></p>
+                                                                <span id="bc_1_5MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-830609831"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_1_5BR" class="comment-replies"></div>
+                                                            <div id="bc_1_5B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_1_7B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c2800431632437166482" class="comment-block">
+                                                                <div id="bc_1_7M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Kem</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="hacking-harry-potter-wands.html">June 20, 2019 at 6:59 PM</a></span></div>
+                                                                <p id="bc_1_7MC" class="comment-content">Are you sure that IR LED do not work? This guy did it. https://www.facebook.com/stayingdusty/posts/10155265482099759</p>
+                                                                <span id="bc_1_7MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-1383243372"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_1_7BR" class="comment-replies"></div>
+                                                            <div id="bc_1_7B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_1_8B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c8597784374708676611" class="comment-block">
+                                                                <div id="bc_1_8M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Magicstick</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="hacking-harry-potter-wands.html">July 12, 2019 at 1:50 AM</a></span></div>
+                                                                <p id="bc_1_8MC" class="comment-content">Nice Post! Keep Sharing. <a href="https://www.magicstickone.com/" rel="nofollow">Intel Computer Stick</a></p>
+                                                                <span id="bc_1_8MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-1797513077"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_1_8BR" class="comment-replies"></div>
+                                                            <div id="bc_1_8B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_1_9B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c7453186620226792955" class="comment-block">
+                                                                <div id="bc_1_9M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Anonymous</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="hacking-harry-potter-wands.html">September 19, 2019 at 9:35 AM</a></span></div>
+                                                                <p id="bc_1_9MC" class="comment-content">Does using multiple facial tracking dot increase the precision? <br>The video you guys made was lovely! </p>
+                                                                <span id="bc_1_9MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-1174976298"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_1_9BR" class="comment-replies"></div>
+                                                            <div id="bc_1_9B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_1_10B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c845375439902275272" class="comment-block">
+                                                                <div id="bc_1_10M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Olafsmom</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="hacking-harry-potter-wands.html">March 8, 2020 at 5:13 PM</a></span></div>
+                                                                <p id="bc_1_10MC" class="comment-content">do you feel a larger dot would work as well?   do you know what size the "dot" on those sold at the park are?  photos seem to make them look larger that the 3mm you suggested (and which I purchased)  Just wondering. . . can't wait to try out  my wand when we go later this year<br></p>
+                                                                <span id="bc_1_10MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-781989670"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_1_10BR" class="comment-replies"></div>
+                                                            <div id="bc_1_10B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_1_11B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c6583276657713149540" class="comment-block">
+                                                                <div id="bc_1_11M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Adwaitaa Saha</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="hacking-harry-potter-wands.html">October 31, 2020 at 11:51 PM</a></span></div>
+                                                                <p id="bc_1_11MC" class="comment-content">nice</p>
+                                                                <span id="bc_1_11MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-1653795701"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_1_11BR" class="comment-replies"></div>
+                                                            <div id="bc_1_11B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_1_12B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c6510379717765729986" class="comment-block">
+                                                                <div id="bc_1_12M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Anonymous</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="hacking-harry-potter-wands.html">November 2, 2020 at 11:57 AM</a></span></div>
+                                                                <p id="bc_1_12MC" class="comment-content">Sweet because I got mine 5 years ago and was wondering ti I should bring it on this vacation.Didnt know if it was battery operated. Thank you so much!!</p>
+                                                                <span id="bc_1_12MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-1496469025"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_1_12BR" class="comment-replies"></div>
+                                                            <div id="bc_1_12B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_1_13B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c8072556792708813421" class="comment-block">
+                                                                <div id="bc_1_13M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Unknown</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="hacking-harry-potter-wands.html">June 5, 2021 at 1:47 PM</a></span></div>
+                                                                <p id="bc_1_13MC" class="comment-content">So essentially this is Ron's wand?</p>
+                                                                <span id="bc_1_13MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-633979571"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_1_13BR" class="comment-replies"></div>
+                                                            <div id="bc_1_13B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_1_14B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c4876524609909782003" class="comment-block">
+                                                                <div id="bc_1_14M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Anonymous</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="hacking-harry-potter-wands.html">October 24, 2021 at 6:27 PM</a></span></div>
+                                                                <p id="bc_1_14MC" class="comment-content">I bought an interactive wand. If I remove the tip that alone should work if affixed to anything, even say a finger. Does this seem right? </p>
+                                                                <span id="bc_1_14MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-1311721795"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_1_14BR" class="comment-replies">
+                                                                <span id="bc_1_14b+seedQD" kind="d">
+                                                                    <div id="bc_1_16T" class="comment-thread inline-thread" kind="t" t="0" u="0">
+                                                                        <span id="bc_1_16TT" class="thread-toggle thread-expanded" kind="g">
+                                                                            <span id="bc_1_16TA" class="thread-arrow"></span>
+                                                                            <span id="bc_1_16TN" class="thread-count">
+                                                                                <span id="bc_1_16TNT" style="display: none;">0</span><span id="bc_1_16TNU" style="display: none;"></span><a href="javascript:;" target="_self">Replies</a>
+                                                                                <div id="bc_1_16TD" class="thread-dropContainer thread-expanded"><span class="thread-drop"></span></div>
+                                                                            </span>
+                                                                        </span>
+                                                                        <ol id="bc_1_16TC" class="thread-chrome thread-expanded" unselectable="on">
+                                                                            <div style="zoom:1" unselectable="on">
+                                                                                <li id="bc_1_16B" class="comment" kind="b">
+                                                                                    <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                                                    <div id="c8909799620689315874" class="comment-block">
+                                                                                        <div id="bc_1_16M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Anonymous</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="hacking-harry-potter-wands.html">February 24, 2022 at 4:53 PM</a></span></div>
+                                                                                        <p id="bc_1_16MC" class="comment-content">did it work?</p>
+                                                                                        <span id="bc_1_16MN" class="comment-actions secondary-text" kind="m"><span class="item-control blog-admin pid-1777121680"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                                                    </div>
+                                                                                    <div id="bc_1_16BR" class="comment-replies"></div>
+                                                                                    <div id="bc_1_16B_box" class="comment-replybox-single"></div>
+                                                                                </li>
+                                                                            </div>
+                                                                            <div id="bc_1_16I" class="continue" kind="ci"><a href="javascript:;" target="_self">Reply</a></div>
+                                                                        </ol>
+                                                                        <div id="bc_1_16T_box" class="comment-replybox-thread"></div>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                            <div id="bc_1_14B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                    </ol>
+                                                    <div id="bc_1_0I" class="continue" kind="ci" style="display: none;"><a href="javascript:;" target="_self">Add comment</a></div>
+                                                    <div id="bc_1_0L" class="loadmore" kind="rb" style="display: none;"><a href="javascript:;" target="_self">Load more</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comments-footer">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!--Header Bar-->
+        <div id="header-container">
+            <div id="header" class="header">
+                <div class="header-bar">
+                    <span class="title" onclick="$('html,body').stop().animate({'scrollTop': 0})">
+                        <a href="../../index.html" target="_self">
+                            <h1 title="William Osman">William Osman</h1>
+                        </a>
+                        <h3 title="There's science to do.">There's science to do.</h3>
+                    </span>
+                    <input type="text" id="search" autocomplete="off" placeholder="Search">
+                </div>
+                <div class="header-drawer sticky open">
+                    <div id="pages" class="tabs">
+                        <span class="menu-heading">Pages
+                        <span class="indicator"></span>
+                        </span>
+                        <ul>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="" href="../../index.html">Home</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="3583920110399612498" href="../../p/video-ideas.html">Project Ideas</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="6018592759136459730" href="../../p/laser-cutter-info.html">Laser FAQ</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="2405702360668335521" href="../../p/about-me.html">About Me</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="9178769879267408909" href="../../p/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="loading"><span>Loading</span></div>
+        <div id="chromefix"></div>
+    </body>
+</html>

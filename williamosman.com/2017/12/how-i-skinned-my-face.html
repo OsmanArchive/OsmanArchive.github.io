@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+        <title>How I Skinned My Face | William Osman</title>
+        <link href="../../favicon.ico" rel="icon" type="image/x-icon">
+        <link rel="stylesheet" href="../../styles.css">
+        <meta content="William Osman engineering blog" name="description">
+        <!-- Yo Dawg... -->
+    </head>
+    <body class="magazine notouch viewitem-open">
+        <div class="viewitem-panel">
+            <div class="viewitem-wrap">
+                <div class="viewitem-background"></div>
+                <div class="viewitem-header"></div>
+                <div class="viewitem-inner">
+                    <div class="viewitem-content" tabindex="0">
+                        <div class="article hentry  " itemscope="">
+                            <meta itemprop="image_url" content="../../resources/full/Face_Unwrapping_thumbnail.jpg">
+                            <meta itemprop="thumbnailUrl" content="../../resources/thumbnails/Face_Unwrapping_thumbnail.jpg">
+                            <meta itemprop="blogId" content="6671699914881784896">
+                            <meta itemprop="postId" content="8714280746709951972">
+                            <div class="article-header">
+                                <a class="ribbon date " title="21st December 2017" href="how-i-skinned-my-face.html" itemprop="url">
+                                    <div class="top ribbon-piece">Dec</div>
+                                    <div class="bottom ribbon-piece">21</div>
+                                    <div class="tail">
+                                        <div class="left ribbon-piece"></div>
+                                        <div class="right ribbon-piece"></div>
+                                    </div>
+                                </a>
+                                <h1 class="title entry-title" itemprop="name">
+                                    <a href="how-i-skinned-my-face.html">
+                                    How I Skinned My Face</a>
+                                </h1>
+                            </div>
+                            <div class="article-content entry-content" itemprop="articleBody">
+                                <script src="../../resources/shCore.js" type="text/javascript"></script><br>
+                                <script src="../../resources/shBrushPython.js" type="text/javascript"></script> <script src="../../resources/shLegacy.js" type="text/javascript"></script><br>
+                                <div class="separator" style="clear: both; text-align: center;"><a href="../../resources/2017/12/hsmf/Face_Unwrapping_thumbnail.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="736" data-original-width="1309" height="223" src="../../resources/2017/12/hsmf/Face_Unwrapping_thumbnail.jpg" width="400"></a></div>
+                                I unwrapped my face with a video camera and computer code.<br>
+                                <a name="more"></a>
+                                <h2>What?</h2>
+                                <div>I wrote a Python program that stitches the center column of pixels from a video into a single image. If the subject slowly spins around in a chair, the output image is a flat scan of their face. The setup is essentially acting like a photocopier, but the subject is spinning instead of the scanner moving.</div>
+                                <h2>Why?</h2>
+                                <div>
+                                    My friend Mike Keesling (<a href="https://www.instagram.com/blueeyedpop/">Instagram</a>, <a href="https://www.flickr.com/photos/22808796@N00/">Flickr</a>) inspired me several years ago with some of his slit-scan photo art.<br>
+                                    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><a href="../../resources/2017/12/hsmf/keesling_beach_scan.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="658" data-original-width="720" height="292" src="../../resources/2017/12/hsmf/keesling_beach_scan.jpg" width="320"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tr-caption" style="text-align: center;">Mike Keesling beach slit scan</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    Here is my first face-scan attempt from 2013 after talking to Mike about his above picture:
+                                </div>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2017/12/hsmf/face_unwrap_2013.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="1280" data-original-width="1401" height="292" src="../../resources/2017/12/hsmf/face_unwrap_2013.jpg" width="320"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Face Scan 2013</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                I don't really have a good answer to 'why' other than I thought it would be fun to re-do this project and film it!<br>
+                                <br>
+                                <h2>Video</h2>
+                                <div>
+                                    <div class="separator" style="clear: both; text-align: center;"><iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i9.ytimg.com/vi/nZM9Ko806Bg/default.jpg?sqp=CICJ7dEF&amp;rs=AOn4CLC-eU1ie7mjnqf4gEAXTgruH4MTKQ" frameborder="0" height="360" src="https://www.youtube.com/embed/nZM9Ko806Bg?feature=player_embedded&amp;wmode=opaque" width="640"></iframe></div>
+                                    <br>
+                                </div>
+                                <div>Filmed by <a href="http://www.johnwillner.com/">cameramanjohn</a></div>
+                                <h2>Materials?</h2>
+                                <div>You need three things:</div>
+                                <div>
+                                    <ol>
+                                        <li>Video camera</li>
+                                        <li>Computer that can run Python and FFmpeg (download link below)</li>
+                                        <li>Something to spin on</li>
+                                        <li><b>Optional</b>: Adobe After Effects to stabilize the image</li>
+                                    </ol>
+                                    <div>Link contains everything except Python 3 (3.5.2 is what I did this on) and PIL (python imaging library)</div>
+                                    <div><a href="../../resources/2017/12/hsmf/FaceUnwrap.zip">DOWNLOAD</a></div>
+                                    <h2>Procedure</h2>
+                                    <div>First we filmed a video of me spinning in the chair. Every frame of video adds a single column of pixels, so if you want a reasonably sized image you need about 1000 frames of video. We filmed at 60fps so my spin needed to last 16 seconds at the minimum.</div>
+                                </div>
+                                <div><br>
+                                </div>
+                                <div>Turns out, it's reallllly hard to keep perfectly steady while spinning around; this will cause uneven warping in the output image.</div>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2017/12/hsmf/unwrapped_2495.jpeg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="617" data-original-width="1600" height="246" src="../../resources/2017/12/hsmf/unwrapped_2495.jpeg" width="640"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Unstable spin</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>If you can't get a good spin but have access to video software which will let you animate the image position, try manually stabilizing the image with keyframes. I made some guide lines in After Effects and centered my face every 1/4 turn by lining my nose and ear up with said guide line.&nbsp;</div>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2017/12/hsmf/unwrapped_2495_stable.jpeg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="637" data-original-width="1600" height="254" src="../../resources/2017/12/hsmf/unwrapped_2495_stable.jpeg" width="640"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Stabilized spin</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>Not perfect, but it's wayyy better.</div>
+                                <br>
+                                This is how you use the Python script:<br>
+                                <ol>
+                                    <li><a href="https://www.python.org/downloads/">Install Python 3</a> (3.5.2) and PIL (python imaging library)</li>
+                                    <li>Download the zipped folder above, and extract.</li>
+                                    <li>Move your video to the 'video' folder</li>
+                                    <li>Run the 'Face_Unwrap.py' script</li>
+                                </ol>
+                                <div>Note_1... keep everything in that zip file together in the same folder.&nbsp;</div>
+                                <div>Note_2... the code assumes you're filming a horizontal 1080p video</div>
+                                <br>
+                                <h2>Code</h2>
+                                <pre class="brush: python" name="code">from PIL import Image
+      import glob, os
+      
+      for invideo in glob.glob("video\*"):
+          os.system('ffmpeg.exe -i ' + invideo +' -filter:v "crop=2:1080:960:1" -q:v 1 temp/images-%04d.jpeg')
+      
+      print("frames extracted")
+      
+      im_sequence = glob.glob("temp\*.jpeg")
+      im_size = (len(im_sequence), 1080)
+      composite = Image.new("RGB", im_size)
+      pix_col = 0
+      
+      for infile in im_sequence:
+          file, ext = os.path.splitext(infile)
+          im = Image.open(infile)
+          im_center = 1920 / 2
+          im_strip = im.crop( (0, 0, 1, 1080) )
+          composite.paste(im_strip, (pix_col, 0))
+          pix_col += 1
+          im.close()
+          os.remove(infile)
+          print(file)
+      
+      composite.save("unwrapped.jpeg", "JPEG")
+          
+          
+      print("done")
+      </pre>
+                                <h2>Explanation</h2>
+                                <div>Python tells FFmpeg to strip a 2x1080 strip of pixels starting halfway through each frame of the video. You only really want a 1x1080 strip, but that doesn't work for some reason. Then each of those thin images is saved into the '/temp' folder. This might take 10's of seconds to a couple minutes depending on how big the video is and how slow your computer is.&nbsp;</div>
+                                <div><br>
+                                </div>
+                                <div>Python then creates a new blank image to stitch all the strips together. Since the temporary strips are actually two pixels wide, we need to specify the first column.</div>
+                                <div><br>
+                                </div>
+                                <div>Once all the strips are stitched into the final image, Python saves it back into the folder and deletes the temporary strips!</div>
+                                <h2>Results</h2>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2017/12/hsmf/unwrapped_2508_stable.jpeg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="789" data-original-width="1600" height="314" src="../../resources/2017/12/hsmf/unwrapped_2508_stable.jpeg" width="640"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Successful stitch&nbsp;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                This above stitch was edited by cameramanjohn and printed into wrapping paper.<br>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2017/12/hsmf/HOT_GARBAGE.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="1600" data-original-width="1600" height="400" src="../../resources/2017/12/hsmf/HOT_GARBAGE.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">World's Best Wrapping Paper</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>Unfortunately cameramanjohn is partially colorblind so it looks like I've got Jaundice.</div>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2017/12/hsmf/wrapped_present.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="700" data-original-width="1142" height="245" src="../../resources/2017/12/hsmf/wrapped_present.png" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">It fit the cheese puff container perfectly</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h2>The end</h2>
+                                <div>my house burned down so I don't have the wrapping paper anymore :(</div>
+                                <h2>Bonus</h2>
+                                <div>I changed the script to swap the image x-axis with time, so the first frame of the new video is a scan line image of the far left of the original video and the last frame of new video is a scan line image of the far right.&nbsp;</div>
+                                <div class="separator" style="clear: both; text-align: center;"><iframe width="640" height="360" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/qJndmbyW3Bk/0.jpg" src="https://www.youtube.com/embed/qJndmbyW3Bk?feature=player_embedded&amp;wmode=opaque" frameborder="0" allowfullscreen=""></iframe></div>
+                                <div><br>
+                                </div>
+                            </div>
+                            <div class="article-footer">
+                                <div class="publish-info">
+                                    Posted <abbr class="time published" title="2017-12-21T05:25:00.002Z" itemprop="datePublished">21st December 2017</abbr> by <a class="url fn" href="" rel="author" itemprop="author">William</a>
+                                </div>
+                                <div class="share-controls  delay" data-defer="" data-delay="1000">
+                                    <span class="share-twitter twitter-share-button  delay" ><iframe allowtransparency="true" frameborder="0" scrolling="no" src="../../p/twitter.html"></iframe></span>
+                                    <span class="share-facebook  delay"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="../../p/facebook.html"></iframe></span>
+                                </div>
+                            </div>
+                            <div class="comments" data-defer="">
+                                <div class="comments-header toggle-switch">
+                                    <span class="bubble  comments-count " title="9 comments">
+                                    <span class="bubble-content">7</span>
+                                    <span class="bubble-tail"></span>
+                                    </span>
+                                    <h3>
+                                        View comments
+                                    </h3>
+                                </div>
+                                <div class="comments-wrapper blogger-comments toggle-container" data-itemid="8714280746709951972" style="display: block;">
+                                    <div class="comments-content">
+                                        <div id="bc_2_1C" kind="c">
+                                            <div id="bc_2_1CT">
+                                                <div id="bc_2_0T" class="comment-thread" kind="r" t="0" u="0">
+                                                    <ol id="bc_2_0TB">
+                                                        <li id="bc_2_2B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c7708782186532254622" class="comment-block">
+                                                                <div id="bc_2_2M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">.Plaster</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="how-i-skinned-my-face.html">December 21, 2017 at 7:36 AM</a></span></div>
+                                                                <p id="bc_2_2MC" class="comment-content">rip</p>
+                                                                <span id="bc_2_2MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-901316461"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_2_2BR" class="comment-replies"></div>
+                                                            <div id="bc_2_2B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_2_3B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c7788721858121582802" class="comment-block">
+                                                                <div id="bc_2_3M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Anonymous</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="how-i-skinned-my-face.html">December 21, 2017 at 10:39 AM</a></span></div>
+                                                                <p id="bc_2_3MC" class="comment-content">You duh man, stan!</p>
+                                                                <span id="bc_2_3MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-1588436811"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_2_3BR" class="comment-replies"></div>
+                                                            <div id="bc_2_3B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_2_4B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c1286737615176735161" class="comment-block">
+                                                                <div id="bc_2_4M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Anonymous</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="how-i-skinned-my-face.html">December 21, 2017 at 11:09 AM</a></span></div>
+                                                                <p id="bc_2_4MC" class="comment-content">Bees</p>
+                                                                <span id="bc_2_4MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-979742772"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_2_4BR" class="comment-replies"></div>
+                                                            <div id="bc_2_4B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_2_5B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c2314797625924201911" class="comment-block">
+                                                                <div id="bc_2_5M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Michael</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="how-i-skinned-my-face.html">December 21, 2017 at 12:50 PM</a></span></div>
+                                                                <p id="bc_2_5MC" class="comment-content">Can I get the text editor from 3:43 that has a buy bitcoin keyboard shortcut?</p>
+                                                                <span id="bc_2_5MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-847703220"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_2_5BR" class="comment-replies"></div>
+                                                            <div id="bc_2_5B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_2_6B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c7384840781618029018" class="comment-block">
+                                                                <div id="bc_2_6M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Anonymous</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="how-i-skinned-my-face.html">December 21, 2017 at 2:17 PM</a></span></div>
+                                                                <p id="bc_2_6MC" class="comment-content"><span class="deleted-comment">This comment has been removed by the author.</span></p>
+                                                                <span id="bc_2_6MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-168957492"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_2_6BR" class="comment-replies"></div>
+                                                            <div id="bc_2_6B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_2_7B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c1145782666230866769" class="comment-block">
+                                                                <div id="bc_2_7M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Anonymous</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="how-i-skinned-my-face.html">January 12, 2018 at 9:42 AM</a></span></div>
+                                                                <p id="bc_2_7MC" class="comment-content">I would have used pillow instead of PIL, because PIL has been deprecated I think...</p>
+                                                                <span id="bc_2_7MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-329638119"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_2_7BR" class="comment-replies"></div>
+                                                            <div id="bc_2_7B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_2_8B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c5846882210872732805" class="comment-block">
+                                                                <div id="bc_2_8M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Anonymous</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="how-i-skinned-my-face.html">January 8, 2022 at 7:24 PM</a></span></div>
+                                                                <p id="bc_2_8MC" class="comment-content">It doesn't seem to be doing anything, will it still work or am I just being stupid?</p>
+                                                                <span id="bc_2_8MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-94867932"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_2_8BR" class="comment-replies"></div>
+                                                            <div id="bc_2_8B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                    </ol>
+                                                    <div id="bc_2_0I" class="continue" kind="ci" style="display: none;"><a href="javascript:;" target="_self">Add comment</a></div>
+                                                    <div id="bc_2_0L" class="loadmore" kind="rb" style="display: none;"><a href="javascript:;" target="_self">Load more</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comments-footer">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!--Header Bar-->
+        <div id="header-container">
+            <div id="header" class="header">
+                <div class="header-bar">
+                    <span class="title" onclick="$('html,body').stop().animate({'scrollTop': 0})">
+                        <a href="../../index.html" target="_self">
+                            <h1 title="William Osman">William Osman</h1>
+                        </a>
+                        <h3 title="There's science to do.">There's science to do.</h3>
+                    </span>
+                    <input type="text" id="search" autocomplete="off" placeholder="Search">
+                </div>
+                <div class="header-drawer sticky open">
+                    <div id="pages" class="tabs">
+                        <span class="menu-heading">Pages
+                        <span class="indicator"></span>
+                        </span>
+                        <ul>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="" href="../../index.html">Home</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="3583920110399612498" href="../../p/video-ideas.html">Project Ideas</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="6018592759136459730" href="../../p/laser-cutter-info.html">Laser FAQ</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="2405702360668335521" href="../../p/about-me.html">About Me</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="9178769879267408909" href="../../p/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="loading"><span>Loading</span></div>
+        <div id="chromefix"></div>
+    </body>
+</html>

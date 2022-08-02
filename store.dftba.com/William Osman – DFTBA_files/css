@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://web.archive.org/web/20200605155257im_/https://fonts.gstatic.com/s/sourcesanspro/v13/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://web.archive.org/web/20200605155257im_/https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdr.ttf) format('truetype');
+}
+
+/*
+     FILE ARCHIVED ON 15:52:57 Jun 05, 2020 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:02:22 May 24, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  exclusion.robots.policy: 0.192
+  load_resource: 252.5
+  esindex: 0.012
+  RedisCDXSource: 9.574
+  PetaboxLoader3.datanode: 337.79 (7)
+  PetaboxLoader3.resolve: 172.354
+  CDXLines.iter: 133.709 (3)
+  LoadShardBlock: 1219.746 (6)
+  exclusion.robots: 0.209
+*/

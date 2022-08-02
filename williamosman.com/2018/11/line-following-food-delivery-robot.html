@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+        <title>Line Following Food Delivery Robot | William Osman</title>
+        <link href="../../favicon.ico" rel="icon" type="image/x-icon">
+        <link rel="stylesheet" href="../../styles.css">
+        <meta content="William Osman engineering blog" name="description">
+        <!-- Yo Dawg... -->
+    </head>
+    <body class="magazine notouch viewitem-open">
+        <div class="viewitem-panel">
+            <div class="viewitem-wrap">
+                <div class="viewitem-background"></div>
+                <div class="viewitem-header"></div>
+                <div class="viewitem-inner">
+                    <div class="viewitem-content" tabindex="0">
+                            <div class="article hentry  " itemscope="">
+                                <meta itemprop="image_url" content="../../resources/full/chicken_2.png">
+                                <meta itemprop="thumbnailUrl" content="../../resources/thumbnails/chicken_2.png">
+                                <meta itemprop="blogId" content="6671699914881784896">
+                                <meta itemprop="postId" content="3360331936651919208">
+                                <div class="article-header">
+                                    <a class="ribbon date " title="28th November 2018" href="line-following-food-delivery-robot.html" itemprop="url">
+                                        <div class="top ribbon-piece">Nov</div>
+                                        <div class="bottom ribbon-piece">28</div>
+                                        <div class="tail">
+                                            <div class="left ribbon-piece"></div>
+                                            <div class="right ribbon-piece"></div>
+                                        </div>
+                                    </a>
+                                    <h1 class="title entry-title" itemprop="name">
+                                        <a href="line-following-food-delivery-robot.html">
+                                        Line Following Food Delivery Robot</a>
+                                    </h1>
+                                </div>
+                                <div class="article-content entry-content" itemprop="articleBody">
+                                    <div class="separator" style="clear: both; text-align: center;">
+                                        <a href="../../resources/2018/11/lfdr/chicken_2.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="900" data-original-width="1600" height="225" src="../../resources/2018/11/lfdr/chicken_2.png" width="400"></a>
+                                    </div>
+                                    Like a sushi conveyor belt but with line following robots and Thanksgiving dinner.<br>
+                                    <br>
+                                    <a name="more"></a>
+                                    <h2>
+                                        What?
+                                    </h2>
+                                    Instead of passing food across the dinner table like a dirty mongoloid, these line following robots drive around your dining table trying their best to present your guests with food.<br>
+                                    <br>
+                                    I just googled the word mongoloid, and it does not mean what I thought it meant. I would like to apologize to any mongoloids I may have offended.<br>
+                                    <h2>
+                                        Why?
+                                    </h2>
+                                    Last year for Thanksgiving I built a <a href="https://youtu.be/Up09AUDzLVI">gravy train</a> and this year I wanted to build a line following robot sushi conveyor belt. <br>
+                                    <h2>
+                                        Video
+                                    </h2>
+                                    <h2>
+                                        <iframe allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/embed/JUJm2j4E5MQ?wmode=opaque" width="480"></iframe>
+                                    </h2>
+                                    <h2>
+                                        Materials
+                                    </h2>
+                                    <ul>
+                                        <li><a href="https://www.amazon.com/gp/product/B07C69N65P/ref=oh_aui_detailpage_o01_s01?ie=UTF8&amp;psc=1">IR Sensor</a></li>
+                                        <li><a href="https://www.amazon.com/gp/product/B078D7DR9V/ref=oh_aui_detailpage_o01_s01?ie=UTF8&amp;psc=1">Motor Driver</a></li>
+                                        <li><a href="https://www.amazon.com/gp/product/B00U4HP0SQ/ref=oh_aui_detailpage_o00_s00?ie=UTF8&amp;psc=1">Motors</a></li>
+                                        <li><a href="https://www.amazon.com/gp/product/B071JBYDGM/ref=oh_aui_detailpage_o00_s01?ie=UTF8&amp;psc=1">Arduino</a> </li>
+                                    </ul>
+                                    <h2>
+                                        &nbsp;Files
+                                    </h2>
+                                    <a href="../../resources/2018/11/lfdr/LineFollowRobot.zip">Fusion 360 file and Arduino Code </a><br>
+                                    <h2>
+                                        Design
+                                    </h2>
+                                    I've started using Fusion 360 instead of SolidWorks because it's cheaper. SolidWorks costs ~$3k for a basic license while Fusion is cheap or free for non-commercial use.<br>
+                                    <br>
+                                    My thoughts on Fusion 360:<br>
+                                    <ul>
+                                        <li>It will get the job done (sometimes painfully)</li>
+                                        <li>Joints cause more problems than they solve</li>
+                                        <li>I don't really like cloud saving </li>
+                                        <li>Built in CAM is awesome</li>
+                                        <li>It's affordable</li>
+                                    </ul>
+                                    Fusion operates almost identically to other CAD softwares. EXCEPT <i>joints</i>.<br>
+                                    <br>
+                                    In SolidWorks <i>mates </i>are used to relate parts to one another. Each <i>mate</i> added to a part further restricts degrees of freedom. They are extremely intuitive.<br>
+                                    <br>
+                                    In Fusion <i>joints</i> describe the entire relationship between two points. Literally. You select two points then click the degrees of freedom you want to remain.<br>
+                                    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><a href="../../resources/2018/11/lfdr/Joints.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="736" data-original-width="637" height="400" src="../../resources/2018/11/lfdr/Joints.png" width="345"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tr-caption" style="text-align: center;">Fusion 360 joints</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    I want to like joints. I've tried REALLY hard to like joints. But I think they fundamentally break the design process, or <b>my</b> design process at least...<br>
+                                    <br>
+                                    <br>
+                                    Every joint tutorial I've seen only shows the assembly of completed components. Joints are PERFECT for assembling completed components, but that's not how I design things!! When I design in CAD my goal is to position parts relative to each other <b>before</b> creating the features that join them together!<br>
+                                    <br>
+                                    IDK... this post isn't to crap on Fusion 360, but it's been driving me nuts for a while now.<br>
+                                    <br>
+                                    Here's the model<br>
+                                    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><a href="../../resources/2018/11/lfdr/CAD_2.PNG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="725" data-original-width="856" height="271" src="../../resources/2018/11/lfdr/CAD_2.PNG" width="320"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tr-caption" style="text-align: center;">top</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><a href="../../resources/2018/11/lfdr/CAD_1.PNG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="580" data-original-width="894" height="207" src="../../resources/2018/11/lfdr/CAD_1.PNG" width="320"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tr-caption" style="text-align: center;">bottom</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><a href="../../resources/2018/11/lfdr/CAD_3.PNG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="707" data-original-width="731" height="309" src="../../resources/2018/11/lfdr/CAD_3.PNG" width="320"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tr-caption" style="text-align: center;">Tab and slot</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    The tab/slot assembly above is a good example of what I'm talking about. Each part is positioned relative to each other using awkwardly placed <i>rigid joints</i> and offsets before the tabs are extruded, or the slots cut. <br>
+                                    <br>
+                                    I don't know dude, it just feels like <i>joints</i> are worse than mates. Conspiracy theory: Autodesk knows this and is keeping <i>joints</i> in Fusion as to not obsolete their higher end CAD packages (Inventor).<br>
+                                    <h2>
+                                        &nbsp;Electronics
+                                    </h2>
+                                    The electronics for this project are really simple. This motor drive has a 5v regulator on it which you can use to power the arduino and IR sensors. Hook the IR sensors up to 5v/GND/D0.<br>
+                                    <br>
+                                    Adjust the screw pot on the IR sensors so that they can detect the difference between the line and non-line. This is the threshold that determines when the D0 pin changes state.<br>
+                                    <h2>
+                                        Firmware
+                                    </h2>
+                                    Simple line following robots, hands down, are a fantastic beginning robotics project. They are so freaking simple.<br>
+                                    <br>
+                                    <br>
+                                    If the left sensor is over the line, you know the robot needs to steer left.<br>
+                                    If the right sensor is over the line, you know the robot needs to steer right.<br>
+                                    If neither sensor is over the line, you know the robot can keep driving forward.<br>
+                                    Finally, if both sensors are over the line something has gone horribly wrong and maybe you could try driving backwards???<br>
+                                    <br><i>void loop() {<br>&nbsp; drive();<br>}<br><br>void drive(void){<br>&nbsp; bool sensor_right = digitalRead(SENSOR_R_D0);<br>&nbsp; bool sensor_left = digitalRead(SENSOR_L_D0);<br>&nbsp; <br>&nbsp; if (!sensor_right &amp;&amp; !sensor_left) goForward();<br>&nbsp; else if (sensor_right) goRight();<br>&nbsp; else goLeft();<br>}</i><br><br>It's that simple, full code is available to download above.<br>
+                                    <br>
+                                    <h2>
+                                        Problems
+                                    </h2>
+                                    If you're having issues, make sure the sensors are detecting the line.<br>
+                                    Making the line thicker will help the robot respond in time.<br>
+                                    Try moving the sensors farther apart?<br>
+                                    Idk..<br>
+                                    <h2>
+                                        Conclusion
+                                    </h2>
+                                    Line following robots are super cool and very easy to make. You can try making fancier firmware using the analog signals, or maybe even a single sensor??<br>
+                                    <br>
+                                    Byeeee <br>
+                                    <br>
+                                </div>
+                                <div class="article-footer">
+                                    <div class="publish-info">
+                                        Posted <abbr class="time published" title="2018-11-28T08:13:00.001Z" itemprop="datePublished">28th November 2018</abbr> by <a class="url fn" href="" rel="author" itemprop="author">William</a>
+                                    </div>
+                                    <div class="share-controls  delay" data-defer="" data-delay="1000">
+                                        <span class="share-twitter twitter-share-button  delay" ><iframe allowtransparency="true" frameborder="0" scrolling="no" src="../../p/twitter.html"></iframe></span>
+                                        <span class="share-facebook  delay"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="../../p/facebook.html"></iframe></span>
+                                    </div>
+                                </div>
+                                <div class="comments" data-defer="">
+                                    <div class="comments-header toggle-switch">
+                                        <span class="bubble  comments-count " title="8 comments">
+                                        <span class="bubble-content">7</span>
+                                        <span class="bubble-tail"></span>
+                                        </span>
+                                        <h3>
+                                            View comments
+                                        </h3>
+                                    </div>
+                                    <div class="comments-wrapper blogger-comments toggle-container" data-itemid="3360331936651919208" style="display: block;">
+                                        <div class="comments-content">
+                                            <div id="bc_6_1C" kind="c">
+                                                <div id="bc_6_1CT">
+                                                    <div id="bc_6_0T" class="comment-thread" kind="r" t="0" u="0">
+                                                        <ol id="bc_6_0TB">
+                                                            <li id="bc_6_2B" class="comment" kind="b">
+                                                                <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                                <div id="c4105178200945182821" class="comment-block">
+                                                                    <div id="bc_6_2M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Anonymous</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="line-following-food-delivery-robot.html">January 25, 2019 at 2:17 AM</a></span></div>
+                                                                    <p id="bc_6_2MC" class="comment-content">Information is very informative also you can click  <a href="https://nexter.org/" rel="nofollow">Nexter</a> ,and get such type of info, this is the great resource to get such type of information.<br></p>
+                                                                    <span id="bc_6_2MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-1071318580"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                                </div>
+                                                                <div id="bc_6_2BR" class="comment-replies"></div>
+                                                                <div id="bc_6_2B_box" class="comment-replybox-single"></div>
+                                                            </li>
+                                                            <li id="bc_6_3B" class="comment" kind="b">
+                                                                <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                                <div id="c3153360952463074476" class="comment-block">
+                                                                    <div id="bc_6_3M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Atomant89</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="line-following-food-delivery-robot.html">April 8, 2019 at 7:51 PM</a></span></div>
+                                                                    <p id="bc_6_3MC" class="comment-content">Hey William what software do you use to setup cut paths and send them to the x carve? We are trying to do curves like you did with the wooden bearings. Thanks for the help.</p>
+                                                                    <span id="bc_6_3MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-1904533020"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                                </div>
+                                                                <div id="bc_6_3BR" class="comment-replies"></div>
+                                                                <div id="bc_6_3B_box" class="comment-replybox-single"></div>
+                                                            </li>
+                                                            <li id="bc_6_4B" class="comment" kind="b">
+                                                                <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                                <div id="c1472085686260897378" class="comment-block">
+                                                                    <div id="bc_6_4M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Phoumrin</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="line-following-food-delivery-robot.html">June 23, 2019 at 1:49 AM</a></span></div>
+                                                                    <p id="bc_6_4MC" class="comment-content">That's the great idea one</p>
+                                                                    <span id="bc_6_4MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-61847985"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                                </div>
+                                                                <div id="bc_6_4BR" class="comment-replies"></div>
+                                                                <div id="bc_6_4B_box" class="comment-replybox-single"></div>
+                                                            </li>
+                                                            <li id="bc_6_5B" class="comment" kind="b">
+                                                                <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                                <div id="c1191213590587206526" class="comment-block">
+                                                                    <div id="bc_6_5M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Unknown</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="line-following-food-delivery-robot.html">January 2, 2020 at 4:43 PM</a></span></div>
+                                                                    <p id="bc_6_5MC" class="comment-content">Any chance you’ll be doing your blog again anytime?</p>
+                                                                    <span id="bc_6_5MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-1934164785"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                                </div>
+                                                                <div id="bc_6_5BR" class="comment-replies"></div>
+                                                                <div id="bc_6_5B_box" class="comment-replybox-single"></div>
+                                                            </li>
+                                                            <li id="bc_6_6B" class="comment" kind="b">
+                                                                <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                                <div id="c6935699471646028227" class="comment-block">
+                                                                    <div id="bc_6_6M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">UnknownTurtle</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="line-following-food-delivery-robot.html">April 25, 2020 at 5:15 AM</a></span></div>
+                                                                    <p id="bc_6_6MC" class="comment-content">c h e e s e</p>
+                                                                    <span id="bc_6_6MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-1402458457"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                                </div>
+                                                                <div id="bc_6_6BR" class="comment-replies"></div>
+                                                                <div id="bc_6_6B_box" class="comment-replybox-single"></div>
+                                                            </li>
+                                                            <li id="bc_6_7B" class="comment" kind="b">
+                                                                <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                                <div id="c7253251522118508395" class="comment-block">
+                                                                    <div id="bc_6_7M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Testmandan</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="line-following-food-delivery-robot.html">March 18, 2021 at 9:31 PM</a></span></div>
+                                                                    <p id="bc_6_7MC" class="comment-content">Hey William, by any chance would you like a phucking b e e s e c h u r g e r?</p>
+                                                                    <span id="bc_6_7MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-840588713"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                                </div>
+                                                                <div id="bc_6_7BR" class="comment-replies"></div>
+                                                                <div id="bc_6_7B_box" class="comment-replybox-single"></div>
+                                                            </li>
+                                                            <li id="bc_6_8B" class="comment" kind="b">
+                                                                <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                                <div id="c1360895615310847209" class="comment-block">
+                                                                    <div id="bc_6_8M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Anonymous</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="line-following-food-delivery-robot.html">October 16, 2021 at 10:04 AM</a></span></div>
+                                                                    <p id="bc_6_8MC" class="comment-content">what happened to doing stuff on this website William???</p>
+                                                                    <span id="bc_6_8MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-769708866"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                                </div>
+                                                                <div id="bc_6_8BR" class="comment-replies"></div>
+                                                                <div id="bc_6_8B_box" class="comment-replybox-single"></div>
+                                                            </li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comments-footer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Header Bar-->
+        <div id="header-container">
+            <div id="header" class="header">
+                <div class="header-bar">
+                    <span class="title" onclick="$('html,body').stop().animate({'scrollTop': 0})">
+                        <a href="../../index.html" target="_self">
+                            <h1 title="William Osman">William Osman</h1>
+                        </a>
+                        <h3 title="There's science to do.">There's science to do.</h3>
+                    </span>
+                    <input type="text" id="search" autocomplete="off" placeholder="Search">
+                </div>
+                <div class="header-drawer sticky open">
+                    <div id="pages" class="tabs">
+                        <span class="menu-heading">Pages
+                        <span class="indicator"></span>
+                        </span>
+                        <ul>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="" href="../../index.html">Home</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="3583920110399612498" href="../../p/video-ideas.html">Project Ideas</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="6018592759136459730" href="../../p/laser-cutter-info.html">Laser FAQ</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="2405702360668335521" href="../../p/about-me.html">About Me</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="9178769879267408909" href="../../p/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="loading"><span>Loading</span></div>
+        <div id="chromefix"></div>
+    </body>
+</html>

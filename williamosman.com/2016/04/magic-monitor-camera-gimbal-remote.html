@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+        <title>Magic Monitor: Kinetic Gimbal Controller | William Osman</title>
+        <link href="../../favicon.ico" rel="icon" type="image/x-icon">
+        <link rel="stylesheet" href="../../styles.css">
+        <meta content="William Osman engineering blog" name="description">
+        <!-- Yo Dawg... -->
+    </head>
+    <body class="magazine notouch viewitem-open">
+        <div class="viewitem-panel">
+            <div class="viewitem-wrap">
+                <div class="viewitem-background"></div>
+                <div class="viewitem-header"></div>
+                <div class="viewitem-inner">
+                    <div class="viewitem-content" tabindex="0">
+                        <div class="article hentry  " itemscope="">
+                            <meta itemprop="image_url" content="../../resources/full/Gimbal-Remote-Demo.gif">
+                            <meta itemprop="thumbnailUrl" content="../../resources/thumbnails/Gimbal-Remote-Demo.gif">
+                            <meta itemprop="blogId" content="6671699914881784896">
+                            <meta itemprop="postId" content="7687741165073979323">
+                            <div class="article-header">
+                                <a class="ribbon date " title="28th April 2016" href="magic-monitor-camera-gimbal-remote.html" itemprop="url">
+                                    <div class="top ribbon-piece">Apr</div>
+                                    <div class="bottom ribbon-piece">28</div>
+                                    <div class="tail">
+                                        <div class="left ribbon-piece"></div>
+                                        <div class="right ribbon-piece"></div>
+                                    </div>
+                                </a>
+                                <h1 class="title entry-title" itemprop="name">
+                                    <a href="magic-monitor-camera-gimbal-remote.html">
+                                    Magic Monitor: Kinetic Gimbal Controller</a>
+                                </h1>
+                            </div>
+                            <div class="article-content entry-content" itemprop="articleBody">
+                                <div class="separator" style="clear: both; text-align: center;">
+                                </div>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                    <br>
+                                </div>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                    <a href="../../resources/2016/04/gmrt/Gimbal-Remote-Demo.gif" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="../../resources/2016/04/gmrt/Gimbal-Remote-Demo.gif"></a>
+                                </div>
+                                This build converted an external monitor to a wireless kinetic gimbal controller using: two Arduino Pro Minis, two nRF24L01+ modules, a Sparkfun 9DOF IMU, and an AlexMos brushless gimbal.<br>
+                                <br>
+                                <br>
+                                <a name="more"></a><br>
+                                <h2>
+                                    &nbsp;Why?
+                                </h2>
+                                I acquired a beat-up 3-axis BaseCam (AlexMos) camera stabilizer. Two days of rewiring, heat-shrink, and PID turning left me with this:<br>
+                                <br>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/04/gmrt/Stabilizer-Demo.gif" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="../../resources/2016/04/gmrt/Stabilizer-Demo.gif"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Stabilizer stabilizing.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                </div>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                </div>
+                                &nbsp;... a fully functional inexpensive Freefly MōVI alternative I'd been longing for several years. Sexy camera moves have never been so easy!<br>
+                                <br>
+                                I wish...<br>
+                                Turns out these stabilizers are great at stabilizing, and not much else. Frame your shot using the joystick or enabling "follow mode" where the gimbal loosely follows your movement. Try using either of these while rolling and the results are usually less than dismal. Good shots can be captured after a bit of practice and a handful of takes, but that's no good if you've got dialog/action. This may sound silly since every gimbal demo on YouTube makes it look easy, but this is why it's hard:<br>
+                                <ul>
+                                    <li>Clunky/inaccurate/unintuitive movement with the joystick.</li>
+                                    <li>Delayed inaccurate movement with "follow mode".</li>
+                                    <li>The camera's screen is obscured in most configurations.</li>
+                                    <li>An external monitor is disorienting, adds bulk/wires, and is useless at extreme angles.</li>
+                                </ul>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/04/gmrt/Screen-Obscure.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/04/gmrt/Screen-Obscure.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Barely visible screen </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <h2>
+                                    Magic Monitor
+                                </h2>
+                                What if a gimbal could mimic the moment of an external monitor? It would be an intuitive controller allowing a second operator to concentrate on framing! <b><i>As of writing this post I've discovered Freefly has an upgrade for their MōVI which does this exactly and is aptly named MIMIC. However an equivalent Freefly </i><i>MōVI MIMIC setup is ~$4.5k</i><i>. </i></b>I've already built an <a href="../01/laser-cut-dslr-monitor.html">external monitor with handles</a> and the BaseCam gimbal controller has an open API, so this build was relatively quick. <br>
+                                <br>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/04/gmrt/IMG_4906.JPG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/04/gmrt/IMG_4906.JPG" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Laser cut external monitor.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                The monitor already has an Arduino Pro Mini it for remote triggering and low battery warning. First step was to pull this board out.<br>
+                                <table cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/04/gmrt/Workbench.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="263" src="../../resources/2016/04/gmrt/Workbench.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Disassembled monitor.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/04/gmrt/Old-Monitor-Board.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="265" src="../../resources/2016/04/gmrt/Old-Monitor-Board.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">IR remote electronics.</td>
+                                            <td class="tr-caption" style="text-align: center;"><br></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                A nRF24L01+ 2.4GHz wireless module and Razor IMU (red circuit board) were added. The wireless module was mounted to the circuit board, and the IMU was mounted in a 3D printed base then Velcroed to the monitor.<br>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/04/gmrt/New-Monitor-Board.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/04/gmrt/New-Monitor-Board.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Updated electronics.</td>
+                                            <td class="tr-caption" style="text-align: center;"><br></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                Next the receiver for the gimbal was built. I cut the perfboard out to fit in a small project box.<br>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/04/gmrt/Gimbal-Board-blank.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/04/gmrt/Gimbal-Board-blank.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Perfboard cutout</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                Get yelled at for sanding perfboard in the kitchen.<br>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/04/gmrt/Sander-Inside.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/04/gmrt/Sander-Inside.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Don't do this.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                Turns out the kitchen of a small studio is also the living room, dining room and bedroom. So move the sander outside and borrow the neighbor's roof.<br>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/04/gmrt/Sander-Outside.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="400" src="../../resources/2016/04/gmrt/Sander-Outside.jpg" width="300"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Do, do this.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                This is the finished receiver mounted to the gimbal in its project box. There&nbsp; is a 3.3v regulator hiding under the wireless module.<br>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/04/gmrt/Gimbal-Housing.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="400" src="../../resources/2016/04/gmrt/Gimbal-Housing.jpg" width="266"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Gimbal receiver.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                Data from the IMU on the monitor is read by an Arduino, then sent wirelessly via the nRF24L01+ 2.4GHz module. The second nRF24L01+ module receives this data and sends it to another Arduino over SPI. This second Arduino processes the data and then commands the AlexMos gimbal controller via it's serial API. This process happens every 20ms or 50 times per second.<br>
+                                <br>
+                                The firmware was written in the Arduino IDE using the powerful RF24 and SBGC libraries for interfacing with the radio and gimbal controller.<br>
+                                <h2>
+                                    Functionality
+                                </h2>
+                                <h2 style="text-align: center;">
+                                    <iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/uPlxf1nHh3A/0.jpg" frameborder="0" height="360" src="https://www.youtube.com/embed/uPlxf1nHh3A?feature=player_embedded&amp;wmode=opaque" width="640"></iframe>
+                                </h2>
+                                <h2 style="text-align: center;">
+                                </h2>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                    <a href="../../resources/2016/04/gmrt/Gimbal-Remote-Demo.gif" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><br></a>
+                                </div>
+                                &nbsp;The gimbal moves one to one with the monitor in 3-axis: yaw, pitch, and roll. All movements are sent through a simple smoothing algorithm to squash shaky input. There is a button on the monitor which releases the gimbal from the monitor's control.<br>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/04/gmrt/Button.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/04/gmrt/Button.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Gimbal release button</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                This allows you to reorient yourself in relation to the gimbal. When you release the button the gimbal locks back onto the monitor. This feature is limited to yaw only (pointing left and right). I enabled it for pitch and roll, but you quickly loose track of the camera's relationship to the horizon. <br>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                </div>
+                                <br>
+                                <h2>
+                                    Testing
+                                </h2>
+                                There were two issues during the first tests. First being the clumsiness of an HDMI cable between the camera and monitor; second the relatively short range of the wireless modules. I borrowed a cheap FPV transmitter/receiver setup to send analog video and forgo the HDMI cable, and replaced the original wireless modules with their amplified versions. I packaged everything up in little project boxes and special sticky zip-ties.<br>
+                                <br>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/04/gmrt/Video-TX.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/04/gmrt/Video-TX.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Video Transmitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/04/gmrt/Video-RX.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/04/gmrt/Video-RX.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Video Receiver</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/04/gmrt/Amplified-Wirless.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/04/gmrt/Amplified-Wirless.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Amplified nRF24L01+ Module</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                Everything was now working well, but not great. The wireless range for the data surpassed the wireless video feed (good), but the video cuts out randomly for a few seconds (bad). This makes it difficult for the camera operator who's already worrying about looking like a public weirdo spinning in circles staring at a small handheld screen. I think the video cutout issue is due to the cheap chinese FPV setup (surprise!). Lastly there is a weird horizontal oscillation of the gimbal while running (literally running with the gimbal). I hadn't ever tested running shots, but the behavior persisted without the external control inputs which means it's just a PID tuning issue of the gimbal itself.<br>
+                                <br>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                </div>
+                                <h2>
+                                    Conclusion
+                                </h2>
+                                The most difficult part of using this rig is communication between the gimbal operator and camera operator. Most of the subjects we filmed were unpredictable and uncooperative and dogs. The monitor operator has no peripheral vision of the shot, and has to predict movement based on the camera's narrow field of view. With practice this won't be an issue, but I was hoping for something more intuitive.<br>
+                                <br>
+                                All other problems will be fixed sometime in the future. For now the whole system works great with slower moving shots.<br>
+                                <br>
+                                I will post example clips soonish.<br>
+                                <br>
+                                <br>
+                            </div>
+                            <div class="article-footer">
+                                <div class="publish-info">
+                                    Posted <abbr class="time published" title="2016-04-27T20:07:00.001Z" itemprop="datePublished">28th April 2016</abbr> by <a class="url fn" href="" rel="author" itemprop="author">William</a>
+                                </div>
+                                <div class="share-controls  delay" data-defer="" data-delay="1000">
+                                    <span class="share-twitter twitter-share-button  delay" ><iframe allowtransparency="true" frameborder="0" scrolling="no" src="../../p/twitter.html"></iframe></span>
+                                    <span class="share-facebook  delay"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="../../p/facebook.html"></iframe></span>
+                                </div>
+                            </div>
+                            <div class="comments" data-defer="">
+                                <div class="comments-header toggle-switch">
+                                    <span class="bubble  comments-count " title="4 comments">
+                                    <span class="bubble-content">4</span>
+                                    <span class="bubble-tail"></span>
+                                    </span>
+                                    <h3>
+                                        View comments
+                                    </h3>
+                                </div>
+                                <div class="comments-wrapper blogger-comments toggle-container" data-itemid="7687741165073979323" style="display: block;">
+                                    <div class="comments-content">
+                                        <div id="bc_0_1C" kind="c">
+                                            <div id="bc_0_1CT">
+                                                <div id="bc_0_0T" class="comment-thread" kind="r" t="0" u="0">
+                                                    <ol id="bc_0_0TB">
+                                                        <li id="bc_0_2B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c458802311415434776" class="comment-block">
+                                                                <div id="bc_0_2M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Anonymous</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="magic-monitor-camera-gimbal-remote.html">October 2, 2016 at 9:34 AM</a></span></div>
+                                                                <p id="bc_0_2MC" class="comment-content"> Very cool!!!<br>Please describe the wiring diagram Arduino Pro Minis, nRF24L01 and modules !!! Please!!!!!!!</p>
+                                                                <span id="bc_0_2MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-1633113653"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_0_2BR" class="comment-replies"></div>
+                                                            <div id="bc_0_2B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_0_3B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c357059575144841085" class="comment-block">
+                                                                <div id="bc_0_3M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">DJ XH</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="magic-monitor-camera-gimbal-remote.html">March 17, 2017 at 12:52 PM</a></span></div>
+                                                                <p id="bc_0_3MC" class="comment-content">Man, I would really love to build this. </p>
+                                                                <span id="bc_0_3MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-1986909817"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_0_3BR" class="comment-replies"></div>
+                                                            <div id="bc_0_3B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_0_4B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c4523025732612613145" class="comment-block">
+                                                                <div id="bc_0_4M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Anonymous</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="magic-monitor-camera-gimbal-remote.html">August 2, 2017 at 6:12 PM</a></span></div>
+                                                                <p id="bc_0_4MC" class="comment-content">For the most part, sorry for English.<br>Great job, I have one with bluetooth and I'm trying one exactly the same as yours to put in a drone too, would you have how to make the code available? I thank the attention.</p>
+                                                                <span id="bc_0_4MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-100544387"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_0_4BR" class="comment-replies"></div>
+                                                            <div id="bc_0_4B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_0_5B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c6903930716172017369" class="comment-block">
+                                                                <div id="bc_0_5M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">John</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="magic-monitor-camera-gimbal-remote.html">September 15, 2017 at 3:37 PM</a></span></div>
+                                                                <p id="bc_0_5MC" class="comment-content">first very cooooool!!!!! :) project <br>I have the idea to develop a similar project for a drone too, as my Bachelor thesis and for a little drone community (and for a company) in Cuba. If you can give me all the information that you want to share like code or schematics I would be very grateful to you. thanks and sorry for my English <br>johnragnarsson1994@gmail.com</p>
+                                                                <span id="bc_0_5MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-675691819"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comments-footer">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Header Bar-->
+        <div id="header-container">
+            <div id="header" class="header">
+                <div class="header-bar">
+                    <span class="title" onclick="$('html,body').stop().animate({'scrollTop': 0})">
+                        <a href="../../index.html" target="_self">
+                            <h1 title="William Osman">William Osman</h1>
+                        </a>
+                        <h3 title="There's science to do.">There's science to do.</h3>
+                    </span>
+                    <input type="text" id="search" autocomplete="off" placeholder="Search">
+                </div>
+                <div class="header-drawer sticky open">
+                    <div id="pages" class="tabs">
+                        <span class="menu-heading">Pages
+                        <span class="indicator"></span>
+                        </span>
+                        <ul>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="" href="../../index.html">Home</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="3583920110399612498" href="../../p/video-ideas.html">Project Ideas</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="6018592759136459730" href="../../p/laser-cutter-info.html">Laser FAQ</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="2405702360668335521" href="../../p/about-me.html">About Me</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="9178769879267408909" href="../../p/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="loading"><span>Loading</span></div>
+        <div id="chromefix"></div>
+    </body>
+</html>

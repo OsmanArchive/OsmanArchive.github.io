@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&display=swap');
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::selection {
+    color: none;
+    background: none;
+}
+
+::-moz-selection {
+    color: none;
+    background: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+    color: #EEEEEE;
+    scroll-behavior: smooth;
+    border: none;
+    margin-bottom: 5px;
+}
+
+html {
+    overflow: hidden;
+    height: 100%;
+    background-color: #2E2B73;
+}
+
+body {
+    margin: 20px;
+    height: 100%;
+    overflow: auto;
+}
+
+a, a:visited {
+    border: none;
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+    border: none;
+}
+
+h1 {
+    color: #A09CFF;
+}
+
+.red {
+    color: #ff9c9c;
+}

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+        <title>Potato Cannon Speed Sensor | William Osman</title>
+        <link href="../../favicon.ico" rel="icon" type="image/x-icon">
+        <link rel="stylesheet" href="../../styles.css">
+        <meta content="William Osman engineering blog" name="description">
+        <!-- Yo Dawg... -->
+    </head>
+    <body class="magazine notouch viewitem-open">
+        <div class="viewitem-panel">
+            <div class="viewitem-wrap">
+                <div class="viewitem-background"></div>
+                <div class="viewitem-header"></div>
+                <div class="viewitem-inner">
+                    <div class="viewitem-content" tabindex="0">
+                        <div class="article hentry  " itemscope="">
+                            <meta itemprop="image_url" content="../../resources/full/IMG_9001.JPG">
+                            <meta itemprop="thumbnailUrl" content="../../resources/thumbnails/IMG_9001.JPG">
+                            <meta itemprop="blogId" content="6671699914881784896">
+                            <meta itemprop="postId" content="7315526193422291019">
+                            <div class="article-header">
+                                <a class="ribbon date " title="21st September 2016" href="potato-cannon-speed-sensor.html" itemprop="url">
+                                    <div class="top ribbon-piece">Sep</div>
+                                    <div class="bottom ribbon-piece">21</div>
+                                    <div class="tail">
+                                        <div class="left ribbon-piece"></div>
+                                        <div class="right ribbon-piece"></div>
+                                    </div>
+                                </a>
+                                <h1 class="title entry-title" itemprop="name">
+                                    <a href="potato-cannon-speed-sensor.html">
+                                    Potato Cannon Speed Sensor</a>
+                                </h1>
+                            </div>
+                            <div class="article-content entry-content" itemprop="articleBody">
+                                <div class="separator" style="clear: both; text-align: center;">
+                                </div>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                    <a href="../../resources/2016/09/pcss/IMG_9001.JPG" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="266" src="../../resources/2016/09/pcss/IMG_9001.JPG" width="400"></a>
+                                </div>
+                                <br>
+                                I built an infrared speed sensor for my air cannon.<br>
+                                <br>
+                                <a name="more"></a>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/09/pcss/Orange-Slowmo.gif" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="225" src="../../resources/2016/09/pcss/Orange-Slowmo.gif" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">240 frames/sec Galaxy S7</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                I'm not sure if this thing qualifies as a potato gun. It's more like a compressed citrus cannon.<br>
+                                <h2>
+                                    Why?
+                                </h2>
+                                <div>
+                                    The cannon is surprisingly powerful, but observing power isn't the same as quantifying it. A couple years ago I tried to quantify this power using a stopwatch...
+                                </div>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                    <a href="../../resources/2016/09/pcss/Orange.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="68" src="../../resources/2016/09/pcss/Orange.png" width="200"></a>
+                                </div>
+                                <div>
+                                    I shot an orange straight up and recorded its flight time. In a residential neighborhood. Next to parked cars. Turns out straight up is only relatively straight.
+                                </div>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/09/pcss/Early_Experiment.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="170" src="../../resources/2016/09/pcss/Early_Experiment.png" width="320"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Discount artist's rendition</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>
+                                    No cars/people/pets were hit, but the fear I realized as the orange began it's descent to earth erased my experimental concentration. Basically I don't remember the results, and didn't iterate.<br>
+                                    <h2>
+                                        Download
+                                    </h2>
+                                </div>
+                                <div>
+                                    <a href="../../resources/2016/09/pcss/AirCannonSpeed.zip">Arduino code</a>
+                                </div>
+                                <h2>
+                                    Video Overview
+                                </h2>
+                                <div>
+                                    <div class="separator" style="clear: both; text-align: center;">
+                                        <iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/NZ8VMdFccmc/0.jpg" frameborder="0" height="360" src="https://www.youtube.com/embed/NZ8VMdFccmc?feature=player_embedded&amp;wmode=opaque" width="640"></iframe>
+                                    </div>
+                                    <br>
+                                    Lots of video by:<a href="http://www.johnwillner.com/" target="_blank">&nbsp;John Willner</a>
+                                </div>
+                                <h2>
+                                    Design
+                                </h2>
+                                <div>
+                                    Break beams! I don't know of a simpler non-invasive method for measuring velocity. Two infrared beams are positioned a set distance apart, and a microprocessor records the time for an object pass between them.
+                                </div>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/09/pcss/Beam_LOW.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="225" src="../../resources/2016/09/pcss/Beam_LOW.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Not broken - logical LOW</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/09/pcss/Beam_HIGH.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="225" src="../../resources/2016/09/pcss/Beam_HIGH.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Broken - logical HIGH</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>
+                                    A voltage divider is formed using the IR detector and a 100k‎Ω resistor. I have added no filtering whatsoever. Hopefully enclosing the beams in a cardboard tube will stop ambient light from affecting the infrared detectors. #NoFilter
+                                </div>
+                                <div>
+                                    <br>
+                                </div>
+                                <div>
+                                    First I cut the cardboard tube with a hacksaw, then a laser.&nbsp;
+                                </div>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/09/pcss/Laser-Cut-Tube.gif" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="225" src="../../resources/2016/09/pcss/Laser-Cut-Tube.gif" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Laser cutting holes for the beam and set screws</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>
+                                    Screws are used to mount the cardboard tube to the air cannon.
+                                </div>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/09/pcss/Set_Screws.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="225" src="../../resources/2016/09/pcss/Set_Screws.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Sensor mount</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>
+                                    Some sortof display to display the readout is needed. I upcycled an old video prop. <a href="../08/film-props-mission-to-mars.html" target="_blank">Here's a post about said prop</a>.&nbsp;
+                                </div>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                </div>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                </div>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/09/pcss/Prop-3.gif" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="225" src="../../resources/2016/09/pcss/Prop-3.gif" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Sacrifice</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                Having a functional 4 digit 7 segment saved me quite a bit of work. I had to move two of the display wires to different IO pins to free the hardware interrupts.<br>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/09/pcss/Electronics_Work.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="225" src="../../resources/2016/09/pcss/Electronics_Work.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Arduino Pro Mini</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                I then wired the IR beams up.<br>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/09/pcss/Tube_Wiring.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="225" src="../../resources/2016/09/pcss/Tube_Wiring.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Beam wiring</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                First the beam was tested, then a strip of tape was wrapped around to block ambient light and hold everything in place.<br>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/09/pcss/Beam_Test.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="225" src="../../resources/2016/09/pcss/Beam_Test.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Testing one beam</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                Let's write some code!<br>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/09/pcss/Sensor_FTDI.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="225" src="../../resources/2016/09/pcss/Sensor_FTDI.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Programming</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                Recording the beam break times was easy using two hardware interrupts. The microprocessor then subtracts the two times to find the delta. The velocity can be calculated using the distance between the two beams:<br>
+                                <div style="text-align: center;">
+                                    <i><b>velocity = distance / time</b></i>
+                                </div>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                </div>
+                                <div>
+                                    Velocity is displayed in feet per second, which was a little stupid since I kept asking Siri to convert to mph.
+                                </div>
+                                <div>
+                                    The 7 segment display is multiplexed without using resistors for easy wiring. There are more details in that blog post linked above.
+                                </div>
+                                <h2>
+                                    Function
+                                </h2>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/09/pcss/Speed_Sensor_Mounted.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="225" src="../../resources/2016/09/pcss/Speed_Sensor_Mounted.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Finished!</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>
+                                    My #NoFilter didn't pay off; bright ambient light rendered the sensor useless. I applied aluminum foil liberally to block ambient light.
+                                </div>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/09/pcss/Foil_Hack.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="225" src="../../resources/2016/09/pcss/Foil_Hack.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Keeps the government out</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>
+                                    The aluminum foil looked horrible, and <b>didn't work at all</b>. Next shot was going to be in the shadiest spot we could find.
+                                </div>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/09/pcss/St_Bernard_Crack_House.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="283" src="../../resources/2016/09/pcss/St_Bernard_Crack_House.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Shady</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>
+                                    Just kidding.
+                                </div>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                    <iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/LpJeIpcre7A/0.jpg" frameborder="0" height="266" src="https://www.youtube.com/embed/LpJeIpcre7A?feature=player_embedded&amp;wmode=opaque" width="320"></iframe>
+                                </div>
+                                <div>
+                                    The underside of this deck will do.
+                                </div>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                    <a href="../../resources/2016/09/pcss/Shooting_Shade.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="225" src="../../resources/2016/09/pcss/Shooting_Shade.jpg" width="400"></a>
+                                </div>
+                                <div>
+                                    256 fps or 175 mph!!!!!
+                                </div>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                    <a href="../../resources/2016/09/pcss/AR1A8962.JPG" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="223" src="../../resources/2016/09/pcss/AR1A8962.JPG" width="400"></a>
+                                </div>
+                                <div>
+                                    So.. The sensor works, as long as you're shooting in the shade or at night.
+                                </div>
+                                <h2>
+                                    How Powerful?
+                                </h2>
+                                <div>
+                                    We know:
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li>Starting position and velocity = 0</li>
+                                        <li>end velocity = 78 m/s</li>
+                                        <li>end position = 0.95 m</li>
+                                        <li>mass 0.069 kg</li>
+                                    </ul>
+                                    What we can find:
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li>Average acceleration</li>
+                                        <li>Acceleration time</li>
+                                        <li>Projectile energy</li>
+                                        <li>Average power</li>
+                                    </ul>
+                                </div>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/09/pcss/Cannon-Power.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="372" src="../../resources/2016/09/pcss/Cannon-Power.jpg" width="640"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Power calculation</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>
+                                    Results:
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li>Average acceleration = 328 g's</li>
+                                        <li>Projectile energy = 211 joules</li>
+                                        <li>Acceleration time = 0.024 seconds</li>
+                                        <li>Average power = 9250 Watts ~ 12.4 horsepower</li>
+                                    </ul>
+                                    The orange was dead long before hitting the concrete block.<br>
+                                    <br>
+                                    Acceleration and power blew my mind. I would not have guess the cannon is transferring nearly 10kW of power. And 328 g's means the orange is experiencing 222 N or 50 lb of force!
+                                </div>
+                                <h2>
+                                    Conclusion
+                                </h2>
+                                <div>
+                                    #NoFilter was dumb. I'm going to fix this with a high-pass filter and amplifier.&nbsp;
+                                </div>
+                                <div>
+                                    <br>
+                                </div>
+                                <div>
+                                    The cannon produces way more power than I ever thought it would.
+                                </div>
+                                <div>
+                                    <br>
+                                </div>
+                                <div>
+                                    I may be filming the cannon with a real actual high speed camera in the near future.
+                                </div>
+                                <div>
+                                    <h2>
+                                        Air Cannon Build Secrets
+                                    </h2>
+                                    <div>
+                                        There's only one thing you need to worry about:&nbsp;<b>how fast can you release the pressurized air?</b>
+                                    </div>
+                                    <div>
+                                        Sprinkler values are commonly used, but when left stock are a literal bottleneck. You need to carve them out, like removing backflow reduction features. If your cannon is making noises like a dying elephant, it means air is restricted and you're losing power. 90 degree bends don't help either, but a straight valve makes a long cannon.
+                                    </div>
+                                </div>
+                                <h2>
+                                    The End
+                                </h2>
+                                <div>
+                                    That's it.
+                                </div>
+                                <div>
+                                    That's all I got.
+                                </div>
+                            </div>
+                            <div class="article-footer">
+                                <div class="publish-info">
+                                    Posted <abbr class="time published" title="2016-09-20T16:59:00.000Z" itemprop="datePublished">21st September 2016</abbr> by <a class="url fn" href="" rel="author" itemprop="author">William</a>
+                                </div>
+                                <div class="share-controls  delay" data-defer="" data-delay="1000">
+                                    <span class="share-twitter twitter-share-button  delay" ><iframe allowtransparency="true" frameborder="0" scrolling="no" src="../../p/twitter.html"></iframe></span>
+                                    <span class="share-facebook  delay"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="../../p/facebook.html"></iframe></span>
+                                </div>
+                            </div>
+                            <div class="comments" data-defer="">
+                                <div class="comments-header toggle-switch">
+                                    <span class="bubble  comments-count " title="0 comments">
+                                    <span class="bubble-content">0</span>
+                                    <span class="bubble-tail"></span>
+                                    </span>
+                                    <h3>
+                                        Add a comment
+                                    </h3>
+                                </div>
+                                <div class="comments-wrapper blogger-comments toggle-container" data-itemid="7315526193422291019" style="display: block;">
+                                    <div class="comments-content">
+                                        <div id="bc_0_1C" kind="c">
+                                            <div id="bc_0_1CT">
+                                                <div id="bc_0_0T" class="comment-thread" kind="r" t="0" u="0">
+                                                    <ol id="bc_0_0TB"></ol>
+                                                    <div id="bc_0_0I" class="continue" kind="ci" style="display: none;"><a href="javascript:;" target="_self">Add comment</a></div>
+                                                    <div id="bc_0_0L" class="loadmore loaded" kind="rb" style="display: none;"><a href="javascript:;" target="_self">No more comments</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comments-footer">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Header Bar-->
+        <div id="header-container">
+            <div id="header" class="header">
+                <div class="header-bar">
+                    <span class="title" onclick="$('html,body').stop().animate({'scrollTop': 0})">
+                        <a href="../../index.html" target="_self">
+                            <h1 title="William Osman">William Osman</h1>
+                        </a>
+                        <h3 title="There's science to do.">There's science to do.</h3>
+                    </span>
+                    <input type="text" id="search" autocomplete="off" placeholder="Search">
+                </div>
+                <div class="header-drawer sticky open">
+                    <div id="pages" class="tabs">
+                        <span class="menu-heading">Pages
+                        <span class="indicator"></span>
+                        </span>
+                        <ul>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="" href="../../index.html">Home</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="3583920110399612498" href="../../p/video-ideas.html">Project Ideas</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="6018592759136459730" href="../../p/laser-cutter-info.html">Laser FAQ</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="2405702360668335521" href="../../p/about-me.html">About Me</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="9178769879267408909" href="../../p/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="loading"><span>Loading</span></div>
+        <div id="chromefix"></div>
+    </body>
+</html>

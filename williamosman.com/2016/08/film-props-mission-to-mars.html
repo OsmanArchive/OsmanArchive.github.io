@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+        <title>Film Props: Mission to Mars | William Osman</title>
+        <link href="../../favicon.ico" rel="icon" type="image/x-icon">
+        <link rel="stylesheet" href="../../styles.css">
+        <meta content="William Osman engineering blog" name="description">
+        <!-- Yo Dawg... -->
+    </head>
+    <body class="magazine notouch viewitem-open">
+        <div class="viewitem-panel">
+            <div class="viewitem-wrap">
+                <div class="viewitem-background"></div>
+                <div class="viewitem-header"></div>
+                <div class="viewitem-inner">
+                    <div class="viewitem-content" tabindex="0">
+                        <div class="article hentry  " itemscope="">
+                            <meta itemprop="image_url" content="../../resources/full/Prop-1.gif">
+                            <meta itemprop="thumbnailUrl" content="../../resources/thumbnails/Prop-1.gif">
+                            <meta itemprop="blogId" content="6671699914881784896">
+                            <meta itemprop="postId" content="5656405727432079177">
+                            <div class="article-header">
+                                <a class="ribbon date " title="5th August 2016" href="film-props-mission-to-mars.html" itemprop="url">
+                                    <div class="top ribbon-piece">Aug</div>
+                                    <div class="bottom ribbon-piece">5</div>
+                                    <div class="tail">
+                                        <div class="left ribbon-piece"></div>
+                                        <div class="right ribbon-piece"></div>
+                                    </div>
+                                </a>
+                                <h1 class="title entry-title" itemprop="name">
+                                    <a href="film-props-mission-to-mars.html">
+                                    Film Props: Mission to Mars</a>
+                                </h1>
+                            </div>
+                            <div class="article-content entry-content" itemprop="articleBody">
+                                <div class="separator" style="clear: both; text-align: center;">
+                                    <a href="../../resources/2016/08/prop/Prop-1.gif" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="225" src="../../resources/2016/08/prop/Prop-1.gif" width="400"></a>
+                                </div>
+                                <div>
+                                    CGI renders most of the effects in modern film, but still can't compete with a good practical effect. This build-log covers three Arduino powered spaceship props I built for my loosing submission to the 2016 Doritos Crash the Superbowl.
+                                </div>
+                                <div>
+                                    <a name="more"></a>
+                                    <h2>
+                                        The Feature Presentation
+                                    </h2>
+                                </div>
+                                <div>
+                                    Without further ado I present my non-award winning Doritos ad. Sorry, further ado, when I say "my submission" this also includes brothers John and David Willner.
+                                </div>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                    <iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/eV9XF15zR20/0.jpg" frameborder="0" height="266" src="https://www.youtube.com/embed/eV9XF15zR20?feature=player_embedded&amp;wmode=opaque" width="320"></iframe>
+                                </div>
+                                <div>
+                                    Not bad eh?
+                                </div>
+                                <div>
+                                    My opinion is most definitely biased, so if you feel otherwise please shut your mouth.<br>
+                                    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><a href="../../resources/2016/08/prop/Spaceship_Internal.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="223" src="../../resources/2016/08/prop/Spaceship_Internal.jpg" width="400"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tr-caption" style="text-align: center;">Ugly sonofa bitch can see around corners with those eyes</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h2>
+                                    How did I do it?
+                                </h2>
+                                <div>
+                                    Science!!&nbsp;
+                                </div>
+                                <div>
+                                    <br>
+                                </div>
+                                <div>
+                                    Three props were built using Arduinos, random electronics, cardboard, duct-tape, and powered by 9v batteries. Janky construction and foregoing resistors put these props on track for a one day build!
+                                </div>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/08/prop/Overview.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="183" src="../../resources/2016/08/prop/Overview.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Only one button is functional.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>
+                                    I saved a butt-load of time by searching for pre-existing code online. I found an <a href="../../resources/2016/08/prop/_7Seg_Example.pde">example written by Nathan Seidle</a> which can multiplex LEDs&nbsp;<b>WITHOUT&nbsp;resistors</b>&nbsp;by very quickly pulsing 5v to the LEDs. Yeah, I don't think this is good practice either, but hey it works. The 5x8 matrix would have required 8 resistors, and the 4 digit 7-segment would require 8 resistors!
+                                </div>
+                                <h3>
+                                    Prop 1:
+                                </h3>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                </div>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                    <a href="../../resources/2016/08/prop/Prop-1.gif" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="225" src="../../resources/2016/08/prop/Prop-1.gif" width="400"></a>
+                                </div>
+                                <div>
+                                    Driving an LED matrix was new for me, even though I've had a couple sitting brand new in a pile of parts for a few years... The galvanometer was pulled from a moisture meter. Moisture is an important parameter of rockets.<br>
+                                    <br>
+                                    Quick note: if the spelling of "Elavation" bothers you, remember this is supposed to be a kid's work. Or at least that's what I keep telling myself. I honestly can't remember if the misspelling was intentional or not.
+                                </div>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/08/prop/Back-1.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/08/prop/Back-1.jpg" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">My favorite child&nbsp;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>
+                                    Driving the matrix requires 13 wires. You might say "OMG how the heck do you drive hella 40 LEDs with only 13 wires?". First of all, don't talk like that. Second, multiplexing. Trying to drive all 40 LEDs at once won't work, so instead we alternate driving single rows of 8 LEDs at a time. This is what an 8x8 matrix looks like:<br>
+                                    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><a href="../../resources/2016/08/prop/r7ZOP.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="../../resources/2016/08/prop/r7ZOP.png" height="293" width="320"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tr-caption" style="text-align: center;">LED Matrix Schematic</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    The matrix is essential a matrix. We select a row of LEDs by connecting it to ground, and then set the columns depending on how we want that row to light up. Light up one row at a time, then turn it off and move to the next row. This happens quick enough that the human eye perceives every row being lit at the same time (persistence of vision). A high speed camera would reveal the illusion.<br>
+                                    <br>
+                                    Populating the matrix is done by filling a 5 byte array with random numbers and associating each bit to an LED.<br>
+                                    <br>
+                                    My favorite part of this prop is the galvanometer.<br>
+                                    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><a href="../../resources/2016/08/prop/Closeup-1.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/08/prop/Closeup-1.jpg" width="400"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tr-caption" style="text-align: center;">Galvanometer is the white box</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    &nbsp;A galvanometer is essentially a needle attached to a &nbsp;coil of wire and a magnet. When current flows through the coil, it generates a magnetic field which reacts to the magnet and moves the needle; the more current the more the needle moves. This specific meter range is 0mA to 0.5mA. A 10k resistor inline with a 5v signal limits it to 0.5mA. Since the inertia of the needle is relatively large, we can use PWM to control the average current thus the needle position.<br>
+                                    <br>
+                                    The needle position is changed a few times per second by writing a random PWM value. A red LED hot-glued to the galvo lights up if the random value is large enough. A white LED hot-glued to the galvo flickers like a power surge.<br>
+                                    <div>
+                                        <br>
+                                    </div>
+                                    <div>
+                                        The rotary potentiometer is wired to the Arduino but does nothing.
+                                    </div>
+                                    <h3>
+                                        Prop 2:
+                                    </h3>
+                                    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><a href="../../resources/2016/08/prop/Prop-2.gif" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="225" src="../../resources/2016/08/prop/Prop-2.gif" width="400"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tr-caption" style="text-align: center;">My least favorite child</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="separator" style="clear: both; text-align: left;">
+                                        I'm starting to think the spelling errors weren't intentional.&nbsp;
+                                    </div>
+                                    <div class="separator" style="clear: both; text-align: left;">
+                                        Or maybe it's my fat fingers on the label maker keyboard.&nbsp;
+                                    </div>
+                                    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><a href="../../resources/2016/08/prop/Label_maker.jpeg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="300" src="../../resources/2016/08/prop/Label_maker.jpeg" width="400"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tr-caption" style="text-align: center;">Edward sausage hands</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="" style="clear: both; text-align: left;">
+                                        Yeaaahh that's it.
+                                    </div>
+                                    <br>
+                                    Honestly this prop is boring, but provides a lot of dynamic light in the video.<br>
+                                    <div class="separator" style="clear: both; text-align: center;">
+                                        <a href="../../resources/2016/08/prop/Back-2.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="262" src="../../resources/2016/08/prop/Back-2.jpg" width="400"></a>
+                                    </div>
+                                    <br>
+                                    The colored LED brightness values are chosen randomly in four increments (0, 1/4, 1/2, 3/4, 1). I think it creates a more structured blinking.<br>
+                                    <h3>
+                                        Prop 3:
+                                    </h3>
+                                </div>
+                                <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><a href="../../resources/2016/08/prop/Prop-3.gif" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="225" src="../../resources/2016/08/prop/Prop-3.gif" width="400"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tr-caption" style="text-align: center;">Second favorite child</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>
+                                    Here is the countdown timer, the most functional of the three props. Its 4-digit display counts down from 10 seconds, and can be reset by pressing the "Party Mode" button. I'm sorry "Party Mode" isn't more exciting.<br>
+                                    <br>
+                                    <div class="separator" style="clear: both; text-align: center;">
+                                        <a href="../../resources/2016/08/prop/Back-3.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="266" src="../../resources/2016/08/prop/Back-3.jpg" width="400"></a>
+                                    </div>
+                                    This 7-segment display is how I found the no-resistor multiplexing example code, so I literally did nothing but wire the circuit, and code the countdown/button functionality.<br>
+                                    <br>
+                                    Originally I ordered a big red emergency stop button off Amazon which would have been wired to start the countdown, but shipping was horrendously botched, so I improvised with cardboard, a sharpie, and spring.<br>
+                                    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><a href="../../resources/2016/08/prop/614EhWSiIQL._SL1100_.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="200" src="../../resources/2016/08/prop/614EhWSiIQL._SL1100_.jpg" width="200"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tr-caption" style="text-align: center;">"Two day shipping" they said....</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2>
+                                        The End
+                                    </h2>
+                                    <div>
+                                        That's it.<br>
+                                        <br>
+                                        I need a job.
+                                    </div>
+                                    <br>
+                                    <br>
+                                </div>
+                                <script src="https://gist.github.com/anonymous/c981e17be4fc7d1cb20b4b1da3790f09.js"></script>
+                            </div>
+                            <div class="article-footer">
+                                <div class="publish-info">
+                                    Posted <abbr class="time published" title="2016-08-05T07:04:00.002Z" itemprop="datePublished">5th August 2016</abbr> by <a class="url fn" href="" rel="author" itemprop="author">William</a>
+                                </div>
+                                <div class="share-controls  delay" data-defer="" data-delay="1000">
+                                    <span class="share-twitter twitter-share-button  delay" ><iframe allowtransparency="true" frameborder="0" scrolling="no" src="../../p/twitter.html"></iframe></span>
+                                    <span class="share-facebook  delay"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="../../p/facebook.html"></iframe></span>
+                                </div>
+                            </div>
+                            <div class="comments" data-defer="">
+                                <div class="comments-header toggle-switch">
+                                    <span class="bubble  comments-count " title="0 comments">
+                                    <span class="bubble-content">0</span>
+                                    <span class="bubble-tail"></span>
+                                    </span>
+                                    <h3>
+                                        Add a comment
+                                    </h3>
+                                </div>
+                                <div class="comments-wrapper blogger-comments toggle-container" data-itemid="5656405727432079177" style="display: block;">
+                                    <div class="comments-content">
+                                        <div id="bc_0_1C" kind="c">
+                                            <div id="bc_0_1CT">
+                                                <div id="bc_0_0T" class="comment-thread" kind="r" t="0" u="0">
+                                                    <ol id="bc_0_0TB"></ol>
+                                                    <div id="bc_0_0I" class="continue" kind="ci" style="display: none;"><a href="javascript:;" target="_self">Add comment</a></div>
+                                                    <div id="bc_0_0L" class="loadmore loaded" kind="rb" style="display: none;"><a href="javascript:;" target="_self">No more comments</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comments-footer">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Header Bar-->
+        <div id="header-container">
+            <div id="header" class="header">
+                <div class="header-bar">
+                    <span class="title" onclick="$('html,body').stop().animate({'scrollTop': 0})">
+                        <a href="../../index.html" target="_self">
+                            <h1 title="William Osman">William Osman</h1>
+                        </a>
+                        <h3 title="There's science to do.">There's science to do.</h3>
+                    </span>
+                    <input type="text" id="search" autocomplete="off" placeholder="Search">
+                </div>
+                <div class="header-drawer sticky open">
+                    <div id="pages" class="tabs">
+                        <span class="menu-heading">Pages
+                        <span class="indicator"></span>
+                        </span>
+                        <ul>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="" href="../../index.html">Home</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="3583920110399612498" href="../../p/video-ideas.html">Project Ideas</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="6018592759136459730" href="../../p/laser-cutter-info.html">Laser FAQ</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="2405702360668335521" href="../../p/about-me.html">About Me</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="9178769879267408909" href="../../p/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="loading"><span>Loading</span></div>
+        <div id="chromefix"></div>
+    </body>
+</html>

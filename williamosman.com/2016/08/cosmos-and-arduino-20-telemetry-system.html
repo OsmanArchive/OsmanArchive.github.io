@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+        <title>COSMOS and Arduino: The $20 Telemetry System | William Osman</title>
+        <link href="../../favicon.ico" rel="icon" type="image/x-icon">
+        <link rel="stylesheet" href="../../styles.css">
+        <meta content="William Osman engineering blog" name="description">
+        <!-- Yo Dawg... -->
+    </head>
+    <body class="magazine notouch viewitem-open">
+        <div class="viewitem-panel">
+            <div class="viewitem-wrap">
+                <div class="viewitem-background"></div>
+                <div class="viewitem-header"></div>
+                <div class="viewitem-inner">
+                    <div class="viewitem-content" tabindex="0">
+                        <div class="article hentry  " itemscope="">
+                            <meta itemprop="image_url" content="../../resources/full/Race-Car-Cutout.jpg">
+                            <meta itemprop="thumbnailUrl" content="../../resources/thumbnails/Race-Car-Cutout.jpg">
+                            <meta itemprop="blogId" content="6671699914881784896">
+                            <meta itemprop="postId" content="4800094158755344049">
+                            <div class="article-header">
+                                <a class="ribbon date " title="10th August 2016" href="cosmos-and-arduino-20-telemetry-system.html" itemprop="url">
+                                    <div class="top ribbon-piece">Aug</div>
+                                    <div class="bottom ribbon-piece">10</div>
+                                    <div class="tail">
+                                        <div class="left ribbon-piece"></div>
+                                        <div class="right ribbon-piece"></div>
+                                    </div>
+                                </a>
+                                <h1 class="title entry-title" itemprop="name">
+                                    <a href="cosmos-and-arduino-20-telemetry-system.html">
+                                    COSMOS and Arduino: The $20 Telemetry System</a>
+                                </h1>
+                            </div>
+                            <div class="article-content entry-content" itemprop="articleBody">
+                                <br>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                </div>
+                                <div class="separator" style="clear: both; text-align: center;">
+                                </div>
+                                <div style="text-align: left;">
+                                    <div class="separator" style="clear: both; text-align: center;">
+                                        <a href="../../resources/2016/08/csms/Race-Car-Cutout.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="215" src="../../resources/2016/08/csms/Race-Car-Cutout.jpg" width="400"></a>
+                                    </div>
+                                    <br>
+                                    I built an inexpensive, PC based, wireless telemetry system using COSMOS and Arduino. This system measures 3-axis accelerations of a race car allowing engineers to verify and tune the suspension design.<br>
+                                    <a name="more"></a><b style="background-color: yellow;"><br></b>
+                                    <b style="background-color: yellow;">- If you're looking for a more indepth tutorial for this project, it's coming -</b><br>
+                                    <h2>
+                                        <b style="background-color: white;">Download</b>
+                                    </h2>
+                                    <div>
+                                        <b style="background-color: white;"><a href="../../resources/2016/08/csms/COSMOSFiles.zip">COSMOS config files and Arduino firmware</a></b>
+                                    </div>
+                                    <h2>
+                                        Why?
+                                    </h2>
+                                    <div>
+                                        Data acquisition is an integral part of the engineering process. Automated data collection, processing, and presentation will streamline design iteration and reveal previously undetectable issues. Simply watching your design function correctly isn't an indication that it's functioning efficiently.
+                                    </div>
+                                    <div>
+                                        <br>
+                                    </div>
+                                    <div>
+                                        The problem with telemetry is it's difficult to build and expensive to buy. Professional solutions like LabView and associated DAQ (data acquisition) hardware cost thousands of dollars. Open source hardware like Arduino and its large community make data collection easy, but doesn't solve the data presentation.
+                                    </div>
+                                    <div>
+                                        <br>
+                                    </div>
+                                    <div>
+                                        An incredibly inexpensive, dynamic, and expandable telemetry system can be built using Arduino and COSMOS.&nbsp;
+                                    </div>
+                                    <div class="separator" style="clear: both; text-align: center;">
+                                    </div>
+                                    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><a href="../../resources/2016/08/csms/User_Interface.PNG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="223" src="../../resources/2016/08/csms/User_Interface.PNG" width="400"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tr-caption" style="text-align: center;">Cosmos Interface</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    I'm not exaggerating inexpensive. You can literally build this for less than $20.<br>
+                                    <div>
+                                        <ul>
+                                            <li>$5 Arduino clone</li>
+                                            <li>$10 amplified nRF24L01 module pair</li>
+                                            <li>$5 misc electronics</li>
+                                            <li>$0 monies for software</li>
+                                        </ul>
+                                    </div>
+                                    <h2>
+                                        What is COSMOS?
+                                    </h2>
+                                    Cosmos is a <b>FREE</b>, open-source, real-time, data logging and command sending software developed by Ball Aerospace. If you have any intention or desire to display data from or control an embedded system, USE COSMOS! Seriously this program is 'the shit'.<br>
+                                    <blockquote class="tr_bq">
+                                        <h4>
+                                            <b>The Shit (noun)</b>
+                                        </h4>
+                                        "The best. This word is very interesting. The important part of it is without THE, an entirely different meaning applies. My teacher is shit = bad teacher. My teacher is THE shit = greatest teacher"
+                                    </blockquote>
+                                    <blockquote class="tr_bq">
+                                        -Urban Dictionary&nbsp;
+                                    </blockquote>
+                                    My only COSMOS complaint is it's not very intuitive. But like most powerful tools, once learned you will save alot of time and money.<br>
+                                    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><a href="../../resources/2016/08/csms/ALOT.png" width="200"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tr-caption" style="text-align: center;">-hyperboleandahalf</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    "How did you come across COSMOS?" you ask.<br>
+                                    No?<br>
+                                    You didn't ask?<br>
+                                    <br>
+                                    I was working on the set of BattleBots Season 2,<br>
+                                    <div class="separator" style="clear: both; text-align: center;">
+                                        <a href="../../resources/2016/08/csms/File_005.jpeg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="320" src="../../resources/2016/08/csms/File_005.jpeg" width="240"></a>
+                                    </div>
+                                    busy harassing team Chomp,<br>
+                                    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><a href="../../resources/2016/08/csms/File_002.jpeg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="300" src="../../resources/2016/08/csms/File_002.jpeg" width="400"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tr-caption" style="text-align: center;">2/5th team Chomp lookin sour</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    and saw them using COSMOS. I asked "what software is that?", they said, "COSMOS".<br>
+                                    That's it.<br>
+                                    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><a href="../../resources/2016/08/csms/Chomp_COSMOS.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="226" src="../../resources/2016/08/csms/Chomp_COSMOS.png" width="400"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tr-caption" style="text-align: center;">Chomp's COSMOS setup</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2>
+                                        Implementation
+                                    </h2>
+                                    <div>
+                                        <h3>
+                                            <div style="font-size: medium; font-weight: normal;">
+                                                How hard could it be????
+                                            </div>
+                                            <div style="font-size: medium; font-weight: normal;">
+                                                HAHAHAhahaha<br>
+                                                <div class="separator" style="clear: both; text-align: center;">
+                                                    <a href="../../resources/2016/08/csms/tjZ8Nkk.gif" imageanchor="1"><img border="0" src="../../resources/2016/08/csms/tjZ8Nkk.gif" height="260" width="400"></a>
+                                                </div>
+                                            </div>
+                                        </h3>
+                                        <h3>
+                                            <u>Electronics</u>
+                                        </h3>
+                                        <div>
+                                            Before any electronics were built, I "learned" COSMOS by talking to an Arduino sending fake serial data. It took me <b>days</b> of frustration, deteriorating moral, and wallowing in pity. For example COSMOS would show but not connect to my Arduino. Turns out there's a bug where devices assigned to COM port 10 and higher won't connect... I found the bug.
+                                        </div>
+                                        <div>
+                                            <br>
+                                        </div>
+                                        <div>
+                                            One step at a time buddy.
+                                        </div>
+                                        <div>
+                                            <br>
+                                        </div>
+                                        <div>
+                                            Acceleration data is the design requirement, but since this telemetry system is expandable I included hardware to measure the race car battery voltage.
+                                        </div>
+                                        <div>
+                                            <br>
+                                        </div>
+                                        <div>
+                                            The main circuit board was built. It housed:
+                                        </div>
+                                        <div>
+                                            <ul>
+                                                <li>Arduino Pro Mini</li>
+                                                <li>3-axis accelerometer&nbsp;</li>
+                                                <li>nRF24L01 module</li>
+                                                <li>lead solder</li>
+                                                <li>supporting components</li>
+                                            </ul>
+                                        </div>
+                                        <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: center;"><a href="../../resources/2016/08/csms/IMG_4166.JPG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/08/csms/IMG_4166.JPG" width="400"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tr-caption" style="text-align: center;">Arduino, sensors, &nbsp;and 2.4 GHz transceiver</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        That empty 2x6 socket is for the transceiver.<br>
+                                        <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: center;"><a href="../../resources/2016/08/csms/IMG_4142.JPG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/08/csms/IMG_4142.JPG" width="400"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tr-caption" style="text-align: center;">"Kynar wire" for clean circuits</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        An Altoid tin was used to create the enclosure.<br>
+                                        <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: center;"><a href="../../resources/2016/08/csms/IMG_4163.JPG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/08/csms/IMG_4163.JPG" width="400"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tr-caption" style="text-align: center;"><b>:|</b></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        Race car power is 12v, but this board needs 5v and 3.3v. Linear regulators are cheap and easy, but they get hot, and I didn't have one, and RadioShack doesn't exist anymore. This was solved with a trip to the thrift-store; I bought an old car charger and stole it's 5v switching regulator.<br>
+                                        <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: center;"><a href="../../resources/2016/08/csms/IMG_4164.JPG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/08/csms/IMG_4164.JPG" width="400"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tr-caption" style="text-align: center;">5v switching power supply</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        Sooo, it turns out this switching supply didn't jive well with the master power switch on the race car. If the master switch was switched too slowly, the switching power supply would never turn on. What?? If anybody has an explanation that would be great!<br>
+                                        Here's a scope reading of the 12v rail while turning the master switch:<br>
+                                        <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: center;"><a href="../../resources/2016/08/csms/IMG_4190.JPG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/08/csms/IMG_4190.JPG" width="400"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tr-caption" style="text-align: center;">12v master switch throw</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        Korean Jesus helped me find a linear regulator, and I swapped it in place of the switching supply.<br>
+                                        <div class="separator" style="clear: both; text-align: center;">
+                                            <iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/hhtOGkUqVTU/0.jpg" frameborder="0" height="266" src="https://www.youtube.com/embed/hhtOGkUqVTU?feature=player_embedded&amp;wmode=opaque" width="320"></iframe>
+                                        </div>
+                                        Korean Jesus also suggested adding LOTS of capacitance to the regulator's output.<br>
+                                        <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: center;"><a href="../../resources/2016/08/csms/IMG_4228.JPG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/08/csms/IMG_4228.JPG" width="400"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tr-caption" style="text-align: center;">Improvised test power source.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        Transceiver mounting position is pretty important. The main board is mounted near the CG of the car for accurate acceleration, but we want to mount the antenna up high. A second enclosure was built, and the transceiver was mounted. A short segment of Cat6 cable was run between the main board and transceiver.<br>
+                                        <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: center;"><a href="../../resources/2016/08/csms/IMG_4162.JPG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/08/csms/IMG_4162.JPG" width="400"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tr-caption" style="text-align: center;">/r/HailCorporate</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        Altoids doesn't yet know they're a sponsor. Send mints please. <b>OR just start making those sour tangerine candies again.</b><br>
+                                        <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: center;"><a href="../../resources/2016/08/csms/363658241_8fb6021064_b.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="150" src="../../resources/2016/08/csms/363658241_8fb6021064_b.jpg" width="200"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tr-caption" style="text-align: center;">The prison cigarettes of early 2000's middle schoolers</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        Running an SPI protocol through a Cat6 cable next to an engine isn't great, but everything worked fine with a reduced SPI clock frequency.<br>
+                                        <div class="separator" style="clear: both; text-align: center;">
+                                        </div>
+                                        <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: center;"><a href="../../resources/2016/08/csms/Race-Car.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="215" src="../../resources/2016/08/csms/Race-Car.jpg" width="400"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tr-caption" style="text-align: center;">Altoids telemetry</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        There is a second Arduino and 2.4 GHz transceiver which is connected to the computer via USB. This pipes the raw byte stream coming from the race car to the computer.<br>
+                                        <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: center;"><a href="../../resources/2016/08/csms/IMG_4195.JPG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/08/csms/IMG_4195.JPG" width="400"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tr-caption" style="text-align: center;">Telemetry USB adapter</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        Here is a picture of all three boards.<br>
+                                        <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: center;"><a href="../../resources/2016/08/csms/IMG_4185.JPG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="../../resources/2016/08/csms/IMG_4185.JPG" width="400"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tr-caption" style="text-align: center;"><b>Left:</b>&nbsp;Race Car Main Board, <b>Center:</b> Race Car Transceiver, <b>Right:</b> USB adapter and Transceiver</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h3>
+                                            <u>COSMOS</u>
+                                        </h3>
+                                        I can't say COSMOS hasn't been documented, because it has, but everything is a first world struggle when you're new.
+                                    </div>
+                                    <div>
+                                        <br>
+                                        <a href="https://cosmosc2.com/docs/v5/">COSMOS Documentation</a><br>
+                                        <br>
+                                        <span style="background-color: yellow;"><b style="background-color: white;">Creating and modifying a project is done through configuration files.</b></span> Like you literally create a text file and type things into it. I'm pretty sure the documentation is only a cheat-sheet for somebody who already knows their way around.<br>
+                                        <br>
+                                        <b>Three configuration files are needed</b>&nbsp;for a basic project. They specify:<br>
+                                        <ul>
+                                            <li>what type of connection you're making with COSMOS</li>
+                                            <li>what data is coming in</li>
+                                            <li>what data is going out</li>
+                                        </ul>
+                                        This is what a configuration files look like:<br>
+                                        <br>
+                                        <div style="text-align: left;">
+                                            <i><span style="font-size: x-small;">TELEMETRY car_tel accelerometer LITTLE_ENDIAN</span></i>
+                                        </div>
+                                        <div style="text-align: left;">
+                                            <i><span style="font-size: x-small;">&nbsp; &nbsp; APPEND_ITEM length 8 UINT "Packet size so COSMOS can read the serial port."</span></i>
+                                        </div>
+                                        <div style="text-align: left;">
+                                            <i><span style="font-size: x-small;">&nbsp; &nbsp; APPEND_ID_ITEM pktid 8 UINT 1 "Packet id so COSMOS can identify the packet and store it."</span></i>
+                                        </div>
+                                        <div style="text-align: left;">
+                                            <i><span style="font-size: x-small;">&nbsp; &nbsp; APPEND_ITEM sample_rate 8 UINT "samples per second"</span></i>
+                                        </div>
+                                        <div style="text-align: left;">
+                                            <i><span style="font-size: x-small;">&nbsp; &nbsp; APPEND_ITEM x_acceleration 32 FLOAT "x_axis accel in G's."</span></i>
+                                        </div>
+                                        <div style="text-align: left;">
+                                            <i><span style="font-size: x-small;">&nbsp; &nbsp; APPEND_ITEM y_acceleration 32 FLOAT "y_axis accel in G's."</span></i>
+                                        </div>
+                                        <div style="text-align: left;">
+                                            <i><span style="font-size: x-small;">&nbsp; &nbsp; APPEND_ITEM z_acceleration 32 FLOAT "z_axis accel in G's."</span></i>
+                                        </div>
+                                        <div style="text-align: left;">
+                                            <i><br></i>
+                                        </div>
+                                        <div style="text-align: left;">
+                                            Ouch...
+                                        </div>
+                                        <div class="separator" style="clear: both; text-align: center;">
+                                            <a href="../../resources/2016/08/csms/a78ae76da19c1a0f9e0e9b2f7e6229e70bd36cf7bc5b2f29b5f8900face50234.jpg" imageanchor="1"><img border="0" src="../../resources/2016/08/csms/a78ae76da19c1a0f9e0e9b2f7e6229e70bd36cf7bc5b2f29b5f8900face50234.jpg" height="320" width="249"></a>
+                                        </div>
+                                        <div style="text-align: left;">
+                                            <br>
+                                        </div>
+                                        <div style="text-align: left;">
+                                            The worst part is these configuration files are hidden 4 folders deep in the project file. I acknowledge COSMOS is a free software, but a graphical interface for generating the configuration files would be very nice.&nbsp;
+                                        </div>
+                                        <div style="text-align: left;">
+                                            <br>
+                                        </div>
+                                        <div style="text-align: left;">
+                                            Once these basic configuration files are completed, COSMOS can connect to the Arduino and data can be acquired. There are several built-in tools to display this data and send commands:
+                                        </div>
+                                        <div style="text-align: left;">
+                                            <br>
+                                        </div>
+                                        <div style="text-align: left;">
+                                            <b>Packet Viewer</b> - Show the contents of the current packet received, and associated data.
+                                        </div>
+                                        <div style="text-align: left;">
+                                            <b>Command Sender</b> - Allows &nbsp;the user to send commands and associated data.
+                                        </div>
+                                        <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: center;"><a href="../../resources/2016/08/csms/Command_Sending.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="223" src="../../resources/2016/08/csms/Command_Sending.png" width="400"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tr-caption" style="text-align: center;">COSMOS Tools</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div style="text-align: left;">
+                                            <b>Telemetry Grapher</b> - Create custom graphs which update in real time. Automatically saves data logs for future reference.
+                                        </div>
+                                        <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: center;"><a href="../../resources/2016/08/csms/Graph_types.PNG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="352" src="../../resources/2016/08/csms/Graph_types.PNG" width="400"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tr-caption" style="text-align: center;">Telemetry Grapher</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div style="text-align: left;">
+                                            These default tools work well for initial testing, but still don't offer the convenience of a custom screen. To create a custom screen you need...&nbsp;<b>another configuration file!</b>
+                                        </div>
+                                        <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: center;"><a href="../../resources/2016/08/csms/L4caiF7GTkgJa.gif" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="../../resources/2016/08/csms/L4caiF7GTkgJa.gif"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tr-caption" style="text-align: center;"><span style="font-size: large;">Configuration </span><span style="font-size: small;">Configuration</span><span style="font-size: large;"> </span><span style="font-size: x-small;">Configuration</span><span style="font-size: large;"> </span><span style="font-size: xx-small;">Configuration</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div style="text-align: left;">
+                                            Below you can see my custom acceleration data screen and the configuration file used to generate it.
+                                        </div>
+                                    </div>
+                                    <div class="separator" style="clear: both; text-align: center;">
+                                    </div>
+                                    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><a href="../../resources/2016/08/csms/Custom_Screen_and_Config.PNG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="185" src="../../resources/2016/08/csms/Custom_Screen_and_Config.PNG" width="400"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tr-caption" style="text-align: center;">Custom Screen creation</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    Hmmm that's weird I swear it used to say "Acceleration Data".<br>
+                                    <br>
+                                    When the end user is running this telemetry system, they may be overwhelmed with the number of "island windows" COSMOS opens. In reality they'll spend 90% of their time in the custom window and telemetry grapher.<br>
+                                    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><a href="../../resources/2016/08/csms/User_Interface.PNG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="223" src="../../resources/2016/08/csms/User_Interface.PNG" width="400"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tr-caption" style="text-align: center;">Functional user interface</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h3>
+                                        <u>Firmware</u>
+                                    </h3>
+                                    <div>
+                                        Sending data from the Arduino to COSMOS is relatively simple. A C Structure is created containing all the data we want to send. Multiple structures with unique ID's can be created for more organization and reduced bandwidth. These structs are sent one byte at a time to the computer.<br>
+                                        <div style="background: #ffffff; border-width: .1em .1em .1em .8em; border: solid gray; overflow: auto; padding: .2em .6em; width: auto;">
+                                            <pre style="line-height: 125%;"><span style="color: #008800; font-weight: bold;">struct</span> <span style="color: #333399; font-weight: bold;">car_tel_t</span>
+      {
+        <span style="color: #333399; font-weight: bold;">uint8_t</span> length;
+        <span style="color: #333399; font-weight: bold;">uint8_t</span> id;
+        <span style="color: #333399; font-weight: bold;">uint8_t</span> sample_rate; <span style="color: #888888;">//samples per second</span>
+        <span style="color: #333399; font-weight: bold;">uint16_t</span> sample_time;
+        <span style="color: #333399; font-weight: bold;">float</span> x_acceleration;
+        <span style="color: #333399; font-weight: bold;">float</span> y_acceleration;
+        <span style="color: #333399; font-weight: bold;">float</span> z_acceleration;
+        <span style="color: #333399; font-weight: bold;">float</span> battery_voltage <span style="color: #333333;">=</span> <span style="color: #6600ee; font-weight: bold;">0.0</span>;
+        <span style="color: #333399; font-weight: bold;">uint8_t</span> test;
+      };
+      </pre>
+                                        </div>
+                                        Receiving commands from COSMOS is a little more challenging. I created two types of commands: settings and executes. 'Settings' changes a value in memory such as 'sample rate' while 'executes' run functions like accelerometer calibration. I then defined a list of commands and settings with unique ID's.
+                                    </div>
+                                    <div>
+                                        <div style="background: #ffffff; border-width: .1em .1em .1em .8em; border: solid gray; overflow: auto; padding: .2em .6em; width: auto;">
+                                            <pre style="line-height: 125%;"><span style="color: #888888;">//Command ID List</span>
+      <span style="color: #557799;">#define INCOMING_ID_SETTING 0x00</span>
+      <span style="color: #557799;">#define INCOMING_ID_EXECUTE 0x01</span>
+      
+      <span style="color: #888888;">//COSMOS Command list</span>
+      <span style="color: #557799;">#define CMD_NONE  0x00</span>
+      <span style="color: #557799;">#define CMD_TEST  0x01</span>
+      <span style="color: #557799;">#define CMD_SEND  0x02</span>
+      <span style="color: #557799;">#define CMD_STOP  0x03</span>
+      <span style="color: #557799;">#define CMD_ACCELEROMETER_NEUTRAL 0x04</span>
+      <span style="color: #557799;">#define CMD_ACCELEROMETER_CALIBRATE 0x05</span>
+      </pre>
+                                        </div>
+                                        When a button is pressed on the custom screen, COSMOS sends bytes to indicate the command type, target, and value. Here is the COSMOS screen configuration line which generates the button that sends the acceleration calibration command (0x05):
+                                    </div>
+                                    <blockquote class="tr_bq">
+                                        <i>BUTTON 'Calibrate' 'cmd("CAR_TEL SEND_CMD with EXECUTE 0x05")'</i>
+                                    </blockquote>
+                                    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><a href="../../resources/2016/08/csms/Calibration_Window.PNG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="320" src="../../resources/2016/08/csms/Calibration_Window.PNG" width="286"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tr-caption" style="text-align: center;">Calibration Button</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    The arduino receives this information and responds accordingly. Once these send and receive pipelines are in place, adding new commands is easy. The most difficult aspect is keeping track of the command ID's I created when using them in COSMOS.<br>
+                                    <br>
+                                    One of the functions accessible through COSMOS is accelerometer calibration. Why find and hard-code the calibration values when we have a microprocessor to do it for us?<br>
+                                    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><a href="../../resources/2016/08/csms/Accelerometer.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="308" src="../../resources/2016/08/csms/Accelerometer.jpg" width="400"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tr-caption" style="text-align: center;">Accelerometer GY-61</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    I wrote a routine which smooths and records the 3-axis analog output as the user rotates the sensor. Gravity is used as the reference to calculate sensor offset and scale. These calibration values are written to EEPROM and loaded into memory when the device is powered on.<br>
+                                    <h2>
+                                        Video Overview in High Definition!!
+                                    </h2>
+                                    <div>
+                                        <div class="separator" style="clear: both; text-align: center;">
+                                            <iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/CCalRLY35u4/0.jpg" frameborder="0" height="360" src="https://www.youtube.com/embed/CCalRLY35u4?feature=player_embedded&amp;wmode=opaque" width="640"></iframe>
+                                        </div>
+                                        <br>
+                                    </div>
+                                    <h2>
+                                        The End
+                                    </h2>
+                                    <div>
+                                        That's it. For now at least.
+                                    </div>
+                                    <div>
+                                        <br>
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="article-footer">
+                                <div class="publish-info">
+                                    Posted <abbr class="time published" title="2016-08-10T01:34:00.000Z" itemprop="datePublished">10th August 2016</abbr> by <a class="url fn" href="" rel="author" itemprop="author">William</a>
+                                </div>
+                                <div class="share-controls  delay" data-defer="" data-delay="1000">
+                                    <span class="share-twitter twitter-share-button  delay" ><iframe allowtransparency="true" frameborder="0" scrolling="no" src="../../p/twitter.html"></iframe></span>
+                                    <span class="share-facebook  delay"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="../../p/facebook.html"></iframe></span>
+                                </div>
+                            </div>
+                            <div class="comments" data-defer="">
+                                <div class="comments-header toggle-switch">
+                                    <span class="bubble  comments-count " title="5 comments">
+                                    <span class="bubble-content">5</span>
+                                    <span class="bubble-tail"></span>
+                                    </span>
+                                    <h3>
+                                        View comments
+                                    </h3>
+                                </div>
+                                <div class="comments-wrapper blogger-comments toggle-container" data-itemid="4800094158755344049" style="display: block;">
+                                    <div class="comments-content">
+                                        <div id="bc_0_1C" kind="c">
+                                            <div id="bc_0_1CT">
+                                                <div id="bc_0_0T" class="comment-thread" kind="r" t="0" u="0">
+                                                    <ol id="bc_0_0TB">
+                                                        <li id="bc_0_2B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c1628201069760321542" class="comment-block">
+                                                                <div id="bc_0_2M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Paolo Tealdi</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="cosmos-and-arduino-20-telemetry-system.html">January 24, 2017 at 12:46 PM</a></span></div>
+                                                                <p id="bc_0_2MC" class="comment-content">Hi! 'm an italian computer science engineer that works as a freelance consultant engineer and also as a computer science teacher in an italian high school.<br><br>I found on YouTube your Telemetry project for RC car: it's fantastic! I'd like to construct with my students a similar blck box. Could you help us in this project? Are you interested?<br><br>Thank you very much, Best Regards<br><br>Paolo <br></p>
+                                                                <span id="bc_0_2MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-882784295"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_0_2BR" class="comment-replies"></div>
+                                                            <div id="bc_0_2B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_0_3B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/anon36.png"></div>
+                                                            <div id="c4206016391888862272" class="comment-block">
+                                                                <div id="bc_0_3M" class="comment-header" kind="m"><cite class="user">Anonymous</cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="cosmos-and-arduino-20-telemetry-system.html">February 4, 2017 at 1:52 PM</a></span></div>
+                                                                <p id="bc_0_3MC" class="comment-content">Hi I have spent days looking around for this kind of information and your youtube video popped up so thankyou!<br><br>My original plan was to have the arduino set up as a web server kicking out raw data as I have another program that I want to be able to read the data in real time. it can read xml, csv or JSON. Do you know if COSMOS can handle multiple inputs at the same time (several arduino boards) and output these any of those filetypes in realtime?<br><br>Thanks again.</p>
+                                                                <span id="bc_0_3MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-736270276"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_0_3BR" class="comment-replies"></div>
+                                                            <div id="bc_0_3B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_0_4B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/anon36.png"></div>
+                                                            <div id="c9118539131844361291" class="comment-block">
+                                                                <div id="bc_0_4M" class="comment-header" kind="m"><cite class="user">Anonymous</cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="cosmos-and-arduino-20-telemetry-system.html">March 11, 2017 at 9:43 AM</a></span></div>
+                                                                <p id="bc_0_4MC" class="comment-content">Thanks, this looks awesome! I think I'll try this on my home solar system and then get it going with some LoRa(RFM95) radios for Power Wheels Racing Series(PRS and my PRS-RC).<br><br>BTW, I built a PCB in KiCAD to put a ProMini and an RFM95W radio together for LoRaWAN use as a sensor node. It might be of interest to you. It's currently all 3.3V but I'm considering adding a level shifter in some free space on the board and adding more I2C header connectors.  10 boards are ~$14 so pretty cheap:<br>http://dirtypcbs.com/store/designer/details/13122/1115/promini-node-v1-0-50x50-zip<br><br>Thanks again.</p>
+                                                                <span id="bc_0_4MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-736270276"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_0_4BR" class="comment-replies"></div>
+                                                            <div id="bc_0_4B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                        <li id="bc_0_5B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c2881097999994436421" class="comment-block">
+                                                                <div id="bc_0_5M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Anonymous</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="cosmos-and-arduino-20-telemetry-system.html">May 17, 2017 at 10:51 AM</a></span></div>
+                                                                <p id="bc_0_5MC" class="comment-content">Hey William, <br><br>This projected inspired my arduino accelerometer for our Baja SAE team this year, but I used custom processing code and Xbees (2 of your entire system costs less than one fucking xbee lol), but the range offered by the Xbee was needed for our car bc we test over pretty long areas. Anyways, thanks for doing this blog post, it really helped both with suspension and CVT tuning this year. If you're ever in LA, go by UCLA boelter hall!</p>
+                                                                <span id="bc_0_5MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-1968020731"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                        </li>
+                                                        <li id="bc_0_6B" class="comment" kind="b">
+                                                            <div class="avatar-image-container"><img src="../../resources/b36-rounded.png"></div>
+                                                            <div id="c4641291302566907789" class="comment-block">
+                                                                <div id="bc_0_6M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="">Carlos</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="cosmos-and-arduino-20-telemetry-system.html">October 2, 2017 at 11:17 AM</a></span></div>
+                                                                <p id="bc_0_6MC" class="comment-content">Hi William,<br>We are students from Spain (University of Zaragoza) and we are interested in develop a cheap arduino based telemetry system for several projects (Such as Rockets, a cubesat, motorbikes, robots... eve 3d printers). We would be glad if you could give us some additional info about your project.<br><br>Thanks!</p>
+                                                                <span id="bc_0_6MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Reply</a><span class="item-control blog-admin pid-651566127"><a o="d" target="_self" href="">Delete</a></span></span>
+                                                            </div>
+                                                            <div id="bc_0_6BR" class="comment-replies"></div>
+                                                            <div id="bc_0_6B_box" class="comment-replybox-single"></div>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comments-footer">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Header Bar-->
+        <div id="header-container">
+            <div id="header" class="header">
+                <div class="header-bar">
+                    <span class="title" onclick="$('html,body').stop().animate({'scrollTop': 0})">
+                        <a href="../../index.html" target="_self">
+                            <h1 title="William Osman">William Osman</h1>
+                        </a>
+                        <h3 title="There's science to do.">There's science to do.</h3>
+                    </span>
+                    <input type="text" id="search" autocomplete="off" placeholder="Search">
+                </div>
+                <div class="header-drawer sticky open">
+                    <div id="pages" class="tabs">
+                        <span class="menu-heading">Pages
+                        <span class="indicator"></span>
+                        </span>
+                        <ul>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="" href="../../index.html">Home</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="3583920110399612498" href="../../p/video-ideas.html">Project Ideas</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="6018592759136459730" href="../../p/laser-cutter-info.html">Laser FAQ</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="2405702360668335521" href="../../p/about-me.html">About Me</a></li>
+                            <li><span class="menu-background"></span><a class="menu-item" data-item-type="page" data-id="9178769879267408909" href="../../p/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="loading"><span>Loading</span></div>
+        <div id="chromefix"></div>
+    </body>
+</html>
